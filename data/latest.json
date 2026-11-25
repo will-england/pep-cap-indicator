@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-25T20:01+00:00",
+  "generated_at": "2026-11-25T20:03+00:00",
   "total": 6,
   "max_total": 12,
   "tier": {
@@ -36,7 +36,7 @@
   ],
   "signals": {
     "vix": {
-      "value": 28.209999084472656,
+      "value": 28.25,
       "points": 3,
       "spike": true,
       "recent_high": 40.029998779296875,
@@ -65,7 +65,7 @@
       }
     },
     "fear_greed": {
-      "value": 15.9012658227848,
+      "value": 15.4585895117541,
       "points": 2,
       "rating": "extreme fear",
       "stale": false,
@@ -143,106 +143,106 @@
   "watchlist": [
     {
       "ticker": "COIN",
-      "price": 103.54,
+      "price": 103.51,
       "wma200": 190.7,
-      "dist_pct": -45.71,
+      "dist_pct": -45.72,
       "weeks": 294,
       "status": "knife"
     },
     {
       "ticker": "IREN",
-      "price": 12.94,
+      "price": 12.89,
       "wma200": 19.18,
-      "dist_pct": -32.5,
+      "dist_pct": -32.81,
       "weeks": 263,
       "status": "knife"
     },
     {
       "ticker": "ORCL",
-      "price": 104.01,
-      "wma200": 148.99,
-      "dist_pct": -30.19,
+      "price": 103.82,
+      "wma200": 148.98,
+      "dist_pct": -30.31,
       "weeks": 1040,
       "status": "knife"
     },
     {
       "ticker": "NFLX",
-      "price": 59.29,
+      "price": 58.87,
       "wma200": 74.65,
-      "dist_pct": -20.57,
+      "dist_pct": -21.14,
       "weeks": 1040,
       "status": "knife"
     },
     {
       "ticker": "UNH",
-      "price": 346.2,
+      "price": 346.41,
       "wma200": 426.14,
-      "dist_pct": -18.76,
+      "dist_pct": -18.71,
       "weeks": 1040,
       "status": "below"
     },
     {
       "ticker": "BA",
-      "price": 164.58,
-      "wma200": 200.07,
-      "dist_pct": -17.74,
+      "price": 164.47,
+      "wma200": 200.06,
+      "dist_pct": -17.79,
       "weeks": 1040,
       "status": "below"
     },
     {
       "ticker": "UBER",
-      "price": 66.68,
-      "wma200": 68.24,
-      "dist_pct": -2.28,
+      "price": 64.7,
+      "wma200": 68.23,
+      "dist_pct": -5.17,
       "weeks": 395,
       "status": "below"
     },
     {
       "ticker": "MCD",
-      "price": 283.57,
+      "price": 283.8,
       "wma200": 275.88,
-      "dist_pct": 2.79,
+      "dist_pct": 2.87,
       "weeks": 1040,
       "status": "at"
     },
     {
       "ticker": "ETN",
-      "price": 317.21,
-      "wma200": 302.97,
-      "dist_pct": 4.7,
+      "price": 316.89,
+      "wma200": 302.96,
+      "dist_pct": 4.6,
       "weeks": 1040,
       "status": "at"
     },
     {
       "ticker": "DVN",
-      "price": 42.67,
+      "price": 42.69,
       "wma200": 40.7,
-      "dist_pct": 4.84,
+      "dist_pct": 4.9,
       "weeks": 1040,
       "status": "at"
     },
     {
+      "ticker": "HD",
+      "price": 353.69,
+      "wma200": 333.91,
+      "dist_pct": 5.92,
+      "weeks": 1040,
+      "status": "above"
+    },
+    {
       "ticker": "LOW",
-      "price": 235.86,
+      "price": 236.01,
       "wma200": 221.37,
-      "dist_pct": 6.54,
+      "dist_pct": 6.61,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "CEG",
-      "price": 237.0,
+      "price": 237.02,
       "wma200": 219.86,
-      "dist_pct": 7.8,
+      "dist_pct": 7.81,
       "weeks": 254,
-      "status": "above"
-    },
-    {
-      "ticker": "HD",
-      "price": 361.71,
-      "wma200": 333.95,
-      "dist_pct": 8.31,
-      "weeks": 1040,
       "status": "above"
     },
     {
@@ -254,10 +254,18 @@
       "status": "above"
     },
     {
+      "ticker": "META",
+      "price": 589.82,
+      "wma200": 519.29,
+      "dist_pct": 13.58,
+      "weeks": 759,
+      "status": "above"
+    },
+    {
       "ticker": "BKR",
-      "price": 46.59,
+      "price": 46.52,
       "wma200": 40.8,
-      "dist_pct": 14.19,
+      "dist_pct": 14.01,
       "weeks": 1040,
       "status": "above"
     },
@@ -270,42 +278,42 @@
       "status": "above"
     },
     {
-      "ticker": "META",
-      "price": 605.14,
-      "wma200": 519.37,
-      "dist_pct": 16.52,
-      "weeks": 759,
-      "status": "above"
-    },
-    {
       "ticker": "PG",
-      "price": 173.5,
+      "price": 173.59,
       "wma200": 148.35,
-      "dist_pct": 16.95,
+      "dist_pct": 17.01,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "BAC",
-      "price": 48.56,
+      "price": 48.51,
       "wma200": 41.17,
-      "dist_pct": 17.96,
+      "dist_pct": 17.85,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "SBUX",
-      "price": 107.99,
+      "price": 108.03,
       "wma200": 90.31,
-      "dist_pct": 19.57,
+      "dist_pct": 19.62,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "NEE",
-      "price": 85.68,
+      "price": 85.71,
       "wma200": 71.65,
-      "dist_pct": 19.57,
+      "dist_pct": 19.62,
+      "weeks": 1040,
+      "status": "above"
+    },
+    {
+      "ticker": "MSFT",
+      "price": 490.13,
+      "wma200": 407.97,
+      "dist_pct": 20.14,
       "weeks": 1040,
       "status": "above"
     },
@@ -318,34 +326,26 @@
       "status": "above"
     },
     {
-      "ticker": "MSFT",
-      "price": 496.13,
-      "wma200": 408.0,
-      "dist_pct": 21.6,
-      "weeks": 1040,
-      "status": "above"
-    },
-    {
-      "ticker": "DIS",
-      "price": 122.51,
-      "wma200": 100.52,
-      "dist_pct": 21.88,
-      "weeks": 1040,
-      "status": "above"
-    },
-    {
       "ticker": "SO",
-      "price": 95.1,
+      "price": 95.19,
       "wma200": 78.01,
-      "dist_pct": 21.91,
+      "dist_pct": 22.02,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "CAT",
-      "price": 543.73,
+      "price": 543.29,
       "wma200": 438.19,
-      "dist_pct": 24.08,
+      "dist_pct": 23.98,
+      "weeks": 1040,
+      "status": "above"
+    },
+    {
+      "ticker": "DIS",
+      "price": 125.17,
+      "wma200": 100.53,
+      "dist_pct": 24.51,
       "weeks": 1040,
       "status": "above"
     },
@@ -359,151 +359,151 @@
     },
     {
       "ticker": "HOOD",
-      "price": 65.81,
+      "price": 65.68,
       "wma200": 52.6,
-      "dist_pct": 25.11,
+      "dist_pct": 24.88,
       "weeks": 279,
       "status": "above"
     },
     {
       "ticker": "TJX",
-      "price": 145.59,
+      "price": 145.68,
       "wma200": 116.14,
-      "dist_pct": 25.35,
-      "weeks": 1040,
-      "status": "above"
-    },
-    {
-      "ticker": "INTC",
-      "price": 53.59,
-      "wma200": 42.48,
-      "dist_pct": 26.17,
+      "dist_pct": 25.43,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "LMT",
-      "price": 598.24,
+      "price": 599.52,
       "wma200": 474.07,
-      "dist_pct": 26.19,
+      "dist_pct": 26.46,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "AMZN",
-      "price": 245.84,
+      "price": 245.53,
       "wma200": 192.87,
-      "dist_pct": 27.46,
+      "dist_pct": 27.3,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "WFC",
-      "price": 81.17,
+      "price": 81.14,
       "wma200": 63.68,
-      "dist_pct": 27.47,
+      "dist_pct": 27.41,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "DUK",
-      "price": 132.06,
+      "price": 132.13,
       "wma200": 103.42,
-      "dist_pct": 27.69,
+      "dist_pct": 27.76,
+      "weeks": 1040,
+      "status": "above"
+    },
+    {
+      "ticker": "VZ",
+      "price": 47.49,
+      "wma200": 36.98,
+      "dist_pct": 28.43,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "TSLA",
-      "price": 382.37,
-      "wma200": 298.99,
-      "dist_pct": 27.89,
+      "price": 384.68,
+      "wma200": 299.0,
+      "dist_pct": 28.65,
       "weeks": 857,
       "status": "above"
     },
     {
-      "ticker": "VZ",
-      "price": 47.48,
-      "wma200": 36.98,
-      "dist_pct": 28.39,
+      "ticker": "INTC",
+      "price": 54.8,
+      "wma200": 42.48,
+      "dist_pct": 29.0,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "BLK",
-      "price": 1144.85,
+      "price": 1145.22,
       "wma200": 886.37,
-      "dist_pct": 29.16,
+      "dist_pct": 29.2,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "COP",
-      "price": 135.2,
+      "price": 135.29,
       "wma200": 103.11,
-      "dist_pct": 31.12,
+      "dist_pct": 31.21,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "BRK-B",
-      "price": 579.85,
+      "price": 580.05,
       "wma200": 441.28,
-      "dist_pct": 31.4,
+      "dist_pct": 31.45,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "AMAT",
-      "price": 306.25,
+      "price": 305.89,
       "wma200": 231.43,
-      "dist_pct": 32.33,
+      "dist_pct": 32.17,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "GOOGL",
-      "price": 272.38,
+      "price": 272.14,
       "wma200": 205.46,
-      "dist_pct": 32.57,
+      "dist_pct": 32.45,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "MRK",
-      "price": 140.23,
+      "price": 140.37,
       "wma200": 104.27,
-      "dist_pct": 34.48,
+      "dist_pct": 34.62,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "MS",
-      "price": 167.92,
+      "price": 167.84,
       "wma200": 124.65,
-      "dist_pct": 34.72,
+      "dist_pct": 34.65,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "MA",
-      "price": 660.93,
+      "price": 661.21,
       "wma200": 487.18,
-      "dist_pct": 35.67,
+      "dist_pct": 35.72,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "GS",
-      "price": 802.66,
+      "price": 801.57,
       "wma200": 590.22,
-      "dist_pct": 35.99,
+      "dist_pct": 35.81,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "COST",
-      "price": 1090.12,
+      "price": 1090.08,
       "wma200": 794.64,
       "dist_pct": 37.18,
       "weeks": 1040,
@@ -511,255 +511,255 @@
     },
     {
       "ticker": "JPM",
-      "price": 317.44,
+      "price": 317.33,
       "wma200": 230.94,
-      "dist_pct": 37.46,
+      "dist_pct": 37.41,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "XOM",
-      "price": 158.93,
-      "wma200": 114.61,
-      "dist_pct": 38.66,
+      "price": 159.02,
+      "wma200": 114.62,
+      "dist_pct": 38.74,
       "weeks": 1040,
       "status": "above"
     },
     {
-      "ticker": "AVGO",
-      "price": 297.15,
-      "wma200": 214.14,
-      "dist_pct": 38.77,
-      "weeks": 904,
-      "status": "above"
-    },
-    {
       "ticker": "VRT",
-      "price": 173.9,
-      "wma200": 124.82,
-      "dist_pct": 39.33,
+      "price": 173.71,
+      "wma200": 124.81,
+      "dist_pct": 39.18,
       "weeks": 435,
       "status": "above"
     },
     {
       "ticker": "CVX",
-      "price": 211.47,
+      "price": 211.65,
       "wma200": 151.73,
-      "dist_pct": 39.38,
+      "dist_pct": 39.49,
       "weeks": 1040,
       "status": "above"
     },
     {
+      "ticker": "AVGO",
+      "price": 301.08,
+      "wma200": 214.16,
+      "dist_pct": 40.59,
+      "weeks": 904,
+      "status": "above"
+    },
+    {
       "ticker": "DE",
-      "price": 643.2,
-      "wma200": 456.39,
-      "dist_pct": 40.93,
+      "price": 642.29,
+      "wma200": 456.38,
+      "dist_pct": 40.74,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "TXN",
-      "price": 267.98,
+      "price": 267.61,
       "wma200": 189.52,
-      "dist_pct": 41.4,
+      "dist_pct": 41.2,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "LRCX",
-      "price": 182.93,
+      "price": 182.6,
       "wma200": 128.53,
-      "dist_pct": 42.32,
+      "dist_pct": 42.07,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "V",
-      "price": 425.6,
+      "price": 425.89,
       "wma200": 298.37,
-      "dist_pct": 42.64,
+      "dist_pct": 42.74,
       "weeks": 976,
       "status": "above"
     },
     {
       "ticker": "PM",
-      "price": 184.54,
+      "price": 184.6,
       "wma200": 128.32,
-      "dist_pct": 43.81,
+      "dist_pct": 43.86,
       "weeks": 976,
       "status": "above"
     },
     {
       "ticker": "CSCO",
-      "price": 94.28,
+      "price": 94.25,
       "wma200": 64.21,
-      "dist_pct": 46.84,
+      "dist_pct": 46.79,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "C",
-      "price": 113.39,
+      "price": 113.35,
       "wma200": 76.55,
-      "dist_pct": 48.14,
+      "dist_pct": 48.08,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "KO",
-      "price": 98.21,
+      "price": 98.28,
       "wma200": 65.73,
-      "dist_pct": 49.41,
+      "dist_pct": 49.51,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "RTX",
-      "price": 195.48,
+      "price": 195.5,
       "wma200": 130.59,
-      "dist_pct": 49.69,
+      "dist_pct": 49.71,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "AAPL",
-      "price": 354.66,
+      "price": 354.07,
       "wma200": 226.71,
-      "dist_pct": 56.44,
+      "dist_pct": 56.18,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "WMT",
-      "price": 132.31,
-      "wma200": 83.75,
-      "dist_pct": 57.99,
+      "price": 131.93,
+      "wma200": 83.74,
+      "dist_pct": 57.55,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "GE",
-      "price": 317.93,
+      "price": 318.03,
       "wma200": 201.15,
-      "dist_pct": 58.06,
+      "dist_pct": 58.1,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "JNJ",
-      "price": 275.33,
+      "price": 275.56,
       "wma200": 174.02,
-      "dist_pct": 58.22,
+      "dist_pct": 58.35,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "TSM",
-      "price": 341.24,
+      "price": 341.2,
       "wma200": 214.57,
-      "dist_pct": 59.04,
+      "dist_pct": 59.02,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "PWR",
-      "price": 569.47,
+      "price": 568.42,
       "wma200": 353.61,
-      "dist_pct": 61.04,
+      "dist_pct": 60.75,
       "weeks": 1040,
       "status": "above"
     },
     {
-      "ticker": "ABBV",
-      "price": 294.2,
-      "wma200": 182.12,
-      "dist_pct": 61.54,
-      "weeks": 726,
-      "status": "above"
-    },
-    {
       "ticker": "ANET",
-      "price": 163.34,
+      "price": 163.12,
       "wma200": 100.95,
-      "dist_pct": 61.81,
+      "dist_pct": 61.6,
       "weeks": 652,
       "status": "above"
     },
     {
+      "ticker": "ABBV",
+      "price": 294.34,
+      "wma200": 182.12,
+      "dist_pct": 61.62,
+      "weeks": 726,
+      "status": "above"
+    },
+    {
       "ticker": "LLY",
-      "price": 1397.57,
+      "price": 1398.35,
       "wma200": 799.03,
-      "dist_pct": 74.91,
+      "dist_pct": 75.01,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "PSX",
-      "price": 236.68,
+      "price": 236.88,
       "wma200": 135.01,
-      "dist_pct": 75.3,
+      "dist_pct": 75.45,
       "weeks": 764,
       "status": "above"
     },
     {
-      "ticker": "PANW",
-      "price": 354.77,
-      "wma200": 185.01,
-      "dist_pct": 91.76,
-      "weeks": 750,
-      "status": "above"
-    },
-    {
       "ticker": "PLTR",
-      "price": 164.0,
-      "wma200": 84.69,
-      "dist_pct": 93.64,
+      "price": 161.18,
+      "wma200": 84.68,
+      "dist_pct": 90.34,
       "weeks": 322,
       "status": "above"
     },
     {
+      "ticker": "PANW",
+      "price": 355.09,
+      "wma200": 185.01,
+      "dist_pct": 91.93,
+      "weeks": 750,
+      "status": "above"
+    },
+    {
       "ticker": "DELL",
-      "price": 292.36,
+      "price": 292.55,
       "wma200": 149.59,
-      "dist_pct": 95.44,
+      "dist_pct": 95.57,
       "weeks": 537,
       "status": "above"
     },
     {
       "ticker": "AMD",
-      "price": 404.16,
+      "price": 403.68,
       "wma200": 202.76,
-      "dist_pct": 99.33,
+      "dist_pct": 99.1,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "CRWD",
-      "price": 208.11,
-      "wma200": 99.38,
-      "dist_pct": 109.4,
+      "price": 210.86,
+      "wma200": 99.4,
+      "dist_pct": 112.14,
       "weeks": 390,
       "status": "above"
     },
     {
       "ticker": "MU",
-      "price": 598.94,
-      "wma200": 250.76,
-      "dist_pct": 138.85,
+      "price": 597.95,
+      "wma200": 250.75,
+      "dist_pct": 138.46,
       "weeks": 1040,
       "status": "above"
     },
     {
       "ticker": "MRNA",
-      "price": 223.09,
+      "price": 222.92,
       "wma200": 82.51,
-      "dist_pct": 170.37,
+      "dist_pct": 170.17,
       "weeks": 417,
       "status": "above"
     },
     {
       "ticker": "RDDT",
-      "price": 91.48,
+      "price": 91.42,
       "wma200": null,
       "dist_pct": null,
       "weeks": 141,
@@ -767,7 +767,7 @@
     },
     {
       "ticker": "GEV",
-      "price": 714.6,
+      "price": 720.65,
       "wma200": null,
       "dist_pct": null,
       "weeks": 140,
@@ -775,7 +775,7 @@
     },
     {
       "ticker": "CRCL",
-      "price": 48.23,
+      "price": 47.72,
       "wma200": null,
       "dist_pct": null,
       "weeks": 78,
@@ -783,7 +783,7 @@
     },
     {
       "ticker": "NBIS",
-      "price": 86.11,
+      "price": 87.31,
       "wma200": null,
       "dist_pct": null,
       "weeks": 110,
@@ -791,7 +791,7 @@
     },
     {
       "ticker": "CRWV",
-      "price": 41.98,
+      "price": 41.67,
       "wma200": null,
       "dist_pct": null,
       "weeks": 88,
@@ -799,7 +799,7 @@
     },
     {
       "ticker": "ARM",
-      "price": 161.41,
+      "price": 161.25,
       "wma200": null,
       "dist_pct": null,
       "weeks": 168,
@@ -12814,7 +12814,7 @@
       35.89,
       26.62,
       26.36,
-      28.21
+      28.25
     ],
     "fng": [
       68.0,
@@ -16817,7 +16817,7 @@
       18.59,
       14.88,
       10.96,
-      15.9
+      15.46
     ],
     "breadth": [
       91.9,
@@ -28826,7 +28826,7 @@
       6910.39,
       7237.17,
       7201.09,
-      7175.8
+      7176.69
     ]
   },
   "warnings": []
