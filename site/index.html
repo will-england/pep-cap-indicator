@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pep Capital Signal</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚛</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="logo">PEP<span>CAPITAL</span></span>
+      <span class="sub">Buy Signal Terminal™</span>
+    </div>
+    <div class="meta">
+      <span id="updated"></span>
+      <button id="theme" class="ghost" aria-label="Toggle light/dark theme">◐</button>
+    </div>
+  </header>
+
+  <main>
+    <div id="warnings"></div>
+
+    <section class="hero card">
+      <div class="gauge-wrap">
+        <svg id="gauge" viewBox="0 0 240 140" role="img" aria-label="Pep score gauge"></svg>
+        <div class="score"><span id="total">–</span><small>/12</small></div>
+      </div>
+      <div class="verdict">
+        <div class="eyebrow">Today's verdict</div>
+        <h1 id="tier-name">Loading…</h1>
+        <p id="tier-tagline" class="tagline"></p>
+        <ol id="ladder" class="ladder"></ol>
+      </div>
+    </section>
+
+    <section>
+      <h2>The four horsemen</h2>
+      <div id="signals" class="grid"></div>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <div>
+          <h2>Pep Score history</h2>
+          <span class="hint">Daily score using the same rules as today</span>
+        </div>
+        <div id="range" class="seg" role="group" aria-label="Chart range"></div>
+      </div>
+      <div id="score-chart" class="chart tall"></div>
+      <div class="card-head sub-head">
+        <h3>S&amp;P 500</h3>
+        <span class="hint">For context, same dates</span>
+      </div>
+      <div id="spx-chart" class="chart"></div>
+      <div id="pick" class="pick"></div>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Does buying the fear actually work?</h2>
+      </div>
+      <p class="hint">Average S&amp;P 500 return after buying on a day with each Pep tier, compared with buying on any random day.</p>
+      <div id="stats" class="table-wrap"></div>
+      <p class="hint" id="stats-note" style="margin-top:10px"></p>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>The "good companies" shopping list</h2>
+        <label class="toggle"><input type="checkbox" id="only-near"> Only show names near or below the 200-week MA</label>
+      </div>
+      <p class="hint" id="wl-summary"></p>
+      <div class="table-wrap">
+        <table id="watchlist">
+          <thead>
+            <tr><th>Ticker</th><th class="num">Price</th><th class="num">200-wk MA</th><th class="bar-col">Distance from 200-week MA</th><th>Status</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Not financial advice. Pep Capital is not a registered anything. Data: Yahoo Finance, CNN, Wikipedia.
+    Refresh with <code>update.bat</code>.
+  </footer>
+
+  <div id="no-data" class="no-data" hidden>
+    <h2>No data yet</h2>
+    <p>Run <code>update.bat</code> in the project folder, then refresh this page.</p>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

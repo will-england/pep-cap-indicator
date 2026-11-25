@@ -1,0 +1,5 @@
+.venv/
+__pycache__/
+*.pyc
+# data/cache_*.json is committed on purpose: if CNN or Wikipedia blocks the
+# GitHub Actions runner, update.py falls back to the last good copy.

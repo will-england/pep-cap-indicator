@@ -1,0 +1,142 @@
+# Pep Capital Buy Signal — configuration
+# Argue about these numbers in the group chat, not in the code.
+#
+# Level rules are checked top to bottom; the first one that matches wins.
+#   min / max      -> inclusive  (value >= min, value <= max)
+#   above / below  -> strict     (value > above, value < below)
+#   min_count      -> at least N watchlist names (signal 4 only)
+
+# How far back the score-history chart goes. CNN's own Fear & Greed data starts
+# 2021-01-22; before that we use a community archive (data/fng_archive_2011_2023.csv)
+# that goes back to 2011-01-03.
+history_start: "2011-01-03"
+
+signals:
+  vix:
+    label: "VIX"
+    blurb: "Wall Street's fear gauge. 40+ means people are panicking."
+    levels:
+      - { points: 3, min: 40 }
+      - { points: 2, min: 30 }
+      - { points: 1, min: 25 }
+    spike:                       # an intraday spike above `level` within the lookback scores max points
+      level: 40
+      lookback_days: 5
+      points: 3
+
+  fear_greed:
+    label: "CNN Fear & Greed"
+    blurb: "Be greedy when others are fearful. Extreme fear is below 25."
+    levels:
+      - { points: 3, below: 10 }
+      - { points: 2, below: 25 }
+      - { points: 1, max: 45 }
+
+  breadth:
+    label: "% of S&P 500 above 200-day MA"
+    blurb: "When most stocks are below trend, the selling is broad. 30% or less is washed out."
+    levels:
+      - { points: 3, max: 30 }
+      - { points: 2, max: 40 }
+      - { points: 1, max: 50 }
+
+  wma200:
+    label: "Good companies at 200-week MA"
+    blurb: "Quality names trading at (or within a hair of) their 200-week average."
+    near_pct: 5                  # "at" the 200WMA = price no more than 5% above it
+    knife_pct: 20                # >20% below the 200WMA gets a "falling knife?" flag (still counts toward the score)
+    levels:                      # value = % of eligible watchlist names at/below
+      - { points: 3, min: 50 }
+      - { points: 2, min: 25 }
+      - { points: 1, min_count: 1 }
+
+tiers:                           # total score 0-12
+  - { min: 9, name: "BACK UP THE TRUCK", emoji: "🚛", tagline: "Generational. Sell a kidney. (Don't sell a kidney.)" }
+  - { min: 6, name: "Pep Rally",         emoji: "📣", tagline: "Blood in the streets. Start nibbling." }
+  - { min: 3, name: "Pep Talk",          emoji: "🗣️", tagline: "Things are getting spicy. Build the shopping list." }
+  - { min: 0, name: "Touch Grass",       emoji: "🌱", tagline: "Nothing to see here. Go outside." }
+
+watchlist:
+  - MSFT
+  - AAPL
+  - GOOGL
+  - AMZN
+  - META
+  - V
+  - MA
+  - COST
+  - BRK-B
+  - NVDA
+  - WMT
+  - DIS
+  - VZ
+  - T
+  - TJX
+  - F
+  - HD
+  - LOW
+  - DUK
+  - MRNA
+  - UNH
+  - TSLA
+  - MCD
+  - SBUX
+  - PG
+  - KO
+  - PM
+  - NEE
+  - SO
+  - CEG
+  - LLY
+  - JNJ
+  - ABBV
+  - MRK
+  - NFLX
+  - RDDT
+  - JPM
+  - C
+  - BAC
+  - WFC
+  - GS
+  - MS
+  - BLK
+  - AXP
+  - GE
+  - GEV
+  - RTX
+  - CAT
+  - DE
+  - BA
+  - UBER
+  - ETN
+  - LMT
+  - PWR
+  - AVGO
+  - AMD
+  - MU
+  - PLTR
+  - CSCO
+  - PANW
+  - INTC
+  - AMAT
+  - LRCX
+  - TXN
+  - CRWD
+  - ORCL
+  - ANET
+  - DELL
+  - XOM
+  - CVX
+  - COP
+  - PSX
+  - DVN
+  - BKR
+  - COIN
+  - CRCL
+  - HOOD
+  - VRT
+  - NBIS
+  - IREN
+  - CRWV
+  - TSM
+  - ARM

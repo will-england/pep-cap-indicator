@@ -1,0 +1,54 @@
+name: Update Pep Signal
+
+on:
+  schedule:
+    # 21:30 UTC on weekdays = 4:30pm ET (winter) / 5:30pm ET (summer), after the close
+    - cron: "30 21 * * 1-5"
+  workflow_dispatch: # "Run workflow" button in the Actions tab
+  push:
+    branches: [main]
+
+permissions:
+  contents: write # commit refreshed data back to the repo
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Fetch signals and build dashboard data
+        run: python update.py
+
+      - name: Commit refreshed data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data site/data.js
+          git diff --cached --quiet || git commit -m "Update signals $(date -u +%F)"
+          git push
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+      - id: deployment
+        uses: actions/deploy-pages@v4
