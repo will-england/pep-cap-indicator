@@ -36,3 +36,4 @@ Everything arguable lives in **`config.yaml`**: thresholds, points, tier names/t
 - `site/`: static dashboard (no build step, no external libraries)
 
 Not financial advice.
+
