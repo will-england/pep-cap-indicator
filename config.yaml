@@ -48,7 +48,7 @@ signals:
     levels:                      # value = % of eligible watchlist names at/below
       - { points: 3, min: 50 }
       - { points: 2, min: 25 }
-      - { points: 1, min_count: 1 }
+      - { points: 1, min_count: 3 }
 
 tiers:                           # total score 0-12
   - { min: 9, name: "BACK UP THE TRUCK", emoji: "🚛", tagline: "Generational. Sell a kidney. (Don't sell a kidney.)" }
