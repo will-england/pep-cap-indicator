@@ -140,3 +140,35 @@ watchlist:
   - CRWV
   - TSM
   - ARM
+  # Real Estate
+  - PLD
+  - AMT
+  - EQIX
+  - O
+  - SPG
+  # Materials
+  - LIN
+  - SHW
+  - APD
+  - FCX
+  - NEM
+  # Healthcare depth
+  - ISRG
+  - TMO
+  - ABT
+  - SYK
+  - VRTX
+  # Defensive + misc
+  - PEP
+  - MDLZ
+  - CL
+  - NKE
+  - BKNG
+  - UNP
+  - HON
+  - WM
+
+# Sector tags are looked up automatically (Yahoo) and cached in data/cache_sectors.json.
+# Override any you disagree with here.
+sector_overrides:
+  IREN: Technology     # Yahoo says Capital Markets; it's a bitcoin-miner-turned-AI-data-center

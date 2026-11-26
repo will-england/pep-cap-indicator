@@ -156,6 +156,15 @@ code { font-family: ui-monospace, Consolas, monospace; font-size: .92em; backgro
 #stats tr.base td { border-top: 2px solid var(--border); color: var(--text-2); }
 @media (max-width: 760px) { .tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
+/* Sector chips + tags */
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+.chips button { font: inherit; font-size: 12px; border: 1px solid var(--border); background: var(--surface-2); color: var(--text-2); border-radius: 999px; padding: 4px 10px; cursor: pointer; }
+.chips button:hover { color: var(--text); }
+.chips button b { color: var(--text); font-weight: 700; margin-left: 4px; }
+.chips button[aria-pressed="true"] { background: var(--text); color: var(--surface); border-color: var(--text); }
+.chips button[aria-pressed="true"] b { color: var(--surface); }
+.tag { font-size: 11px; color: var(--text-2); border: 1px solid var(--border); border-radius: 999px; padding: 1px 8px; background: var(--surface-2); }
+
 /* Watchlist */
 .toggle { font-size: 13px; color: var(--text-2); display: flex; gap: 6px; align-items: center; cursor: pointer; }
 .table-wrap { overflow-x: auto; margin-top: 10px; }

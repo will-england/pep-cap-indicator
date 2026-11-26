@@ -454,9 +454,33 @@
     (knives ? `, including ${knives} more than ${knife}% below (🔪 possible falling knives: they still count toward the score, but check the story before buying).` : ".") +
     ` Bars are clipped at ${DMIN}% / +${DMAX}%.`;
 
+  // sector chips: "Health Care 2/11" = names at/below the 200-wk MA / names with enough history
+  let sectorFilter = "All";
+  const isHit = (r) => ["knife", "below", "at"].includes(r.status);
+  const sectorStats = {};
+  D.watchlist.forEach((r) => {
+    const s = r.sector || "Other";
+    sectorStats[s] = sectorStats[s] || { n: 0, elig: 0, hits: 0 };
+    sectorStats[s].n++;
+    if (r.dist_pct != null) sectorStats[s].elig++;
+    if (isHit(r)) sectorStats[s].hits++;
+  });
+  const sectorNames = Object.keys(sectorStats).sort((a, b) => sectorStats[b].n - sectorStats[a].n || a.localeCompare(b));
+  function renderChips() {
+    $("#sector-chips").innerHTML =
+      `<button type="button" data-s="All" aria-pressed="${sectorFilter === "All"}">All sectors<b>${hits.length}/${elig.length}</b></button>` +
+      sectorNames.map((s) => `<button type="button" data-s="${esc(s)}" aria-pressed="${sectorFilter === s}" title="${sectorStats[s].hits} of ${sectorStats[s].elig} at or below the 200-week MA">${esc(s)}<b>${sectorStats[s].hits}/${sectorStats[s].elig}</b></button>`).join("");
+  }
+  $("#sector-chips").addEventListener("click", (e) => {
+    const b = e.target.closest("button"); if (!b) return;
+    sectorFilter = b.dataset.s;
+    renderChips(); renderTable();
+  });
+  renderChips();
+
   function renderTable() {
     const only = $("#only-near").checked;
-    const rows = only ? hits : D.watchlist;
+    const rows = (only ? hits : D.watchlist).filter((r) => sectorFilter === "All" || (r.sector || "Other") === sectorFilter);
     $("#watchlist tbody").innerHTML = rows.map((r) => {
       const st = STATUS[r.status] || STATUS["no data"];
       let bar = "—";
@@ -474,6 +498,7 @@
       }
       return `<tr>
         <td class="tk">${esc(r.ticker)}</td>
+        <td><span class="tag">${esc(r.sector || "Other")}</span></td>
         <td class="num">${r.price != null ? "$" + r.price.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : "—"}</td>
         <td class="num">${r.wma200 != null ? "$" + r.wma200.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) : "—"}</td>
         <td class="bar-col">${bar}</td>

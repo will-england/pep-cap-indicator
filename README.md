@@ -82,7 +82,7 @@ Everything arguable lives in **`config.yaml`**:
 - signal thresholds and points
 - `near_pct` (5%) and `knife_pct` (20%) for the 200-week rule
 - tier names, emoji and taglines
-- the watchlist
+- the watchlist (sector tags are looked up automatically and cached in `data/cache_sectors.json`; fix any wrong one under `sector_overrides`)
 - `history_start` (how far back the history goes)
 
 ## Run it locally

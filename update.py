@@ -16,6 +16,7 @@ from pep.breadth import fetch_breadth
 from pep.fear_greed import fetch_fear_greed
 from pep.market import fetch_spx, fetch_vix
 from pep.score import match_level, score_vix, tier_for
+from pep.sectors import get_sectors
 from pep.wma200 import fetch_wma
 
 ROOT = Path(__file__).parent
@@ -66,6 +67,12 @@ def main():
     wma = step(f"200-week MAs ({len(watchlist)} tickers)",
                lambda: fetch_wma(watchlist, sc["wma200"]["near_pct"], hs,
                                  sc["wma200"].get("knife_pct", 20)), warnings)
+
+    sectors = step("Sector tags", lambda: get_sectors(watchlist, DATA / "cache_sectors.json",
+                                                      cfg.get("sector_overrides")), warnings) or {}
+    if wma:
+        for r in wma["rows"]:
+            r["sector"] = sectors.get(r["ticker"], "Other")
 
     if fng and fng.get("stale"):
         warnings.append(f"Fear & Greed is from cache (live fetch failed: {fng.get('error')})")
