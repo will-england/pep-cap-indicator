@@ -8,21 +8,16 @@ on:
   push:
     branches: [main]
 
-permissions:
-  contents: write # commit refreshed data back to the repo
-  pages: write
-  id-token: write
-
 concurrency:
   group: pages
   cancel-in-progress: false
 
 jobs:
-  update-and-deploy:
+  # Job 1: fetch data, commit it back, and package site/ for Pages
+  build:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    permissions:
+      contents: write # commit refreshed data back to the repo
     steps:
       - uses: actions/checkout@v7
         with:
@@ -53,5 +48,17 @@ jobs:
         with:
           path: site
 
+  # Job 2: publish the packaged site. Kept separate (as in GitHub's own template)
+  # so the uploaded artifact is fully registered before deploy looks for it.
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - id: deployment
         uses: actions/deploy-pages@v5
