@@ -133,19 +133,27 @@ def main():
             h["wma"] = h["wma_n"] = None
         h["spx"] = spx.reindex(idx, method="ffill") if spx is not None else None
 
-        def row_score(r):
-            p = score_vix(sc["vix"], r.vix, r.vix_hi)[0]
-            p += match_level(sc["fear_greed"]["levels"], None if pd.isna(r.fng) else r.fng)
-            p += match_level(sc["breadth"]["levels"], None if pd.isna(r.breadth) else r.breadth)
-            p += match_level(sc["wma200"]["levels"], None if pd.isna(r.wma) else r.wma,
-                             None if pd.isna(r.wma_n) else r.wma_n)
-            return p
+        nn = lambda v: None if pd.isna(v) else v
 
-        h["score"] = h.apply(row_score, axis=1)
-        h.iloc[-1, h.columns.get_loc("score")] = total  # today uses the freshest readings
+        def row_points(r):
+            return pd.Series({
+                "pts_vix": score_vix(sc["vix"], r.vix, r.vix_hi)[0],
+                "pts_fear_greed": match_level(sc["fear_greed"]["levels"], nn(r.fng)),
+                "pts_breadth": match_level(sc["breadth"]["levels"], nn(r.breadth)),
+                "pts_wma200": match_level(sc["wma200"]["levels"], nn(r.wma), nn(r.wma_n)),
+            })
+
+        pts_cols = ["pts_vix", "pts_fear_greed", "pts_breadth", "pts_wma200"]
+        h[pts_cols] = h.apply(row_points, axis=1)
+        # today uses the freshest readings
+        for k in ["vix", "fear_greed", "breadth", "wma200"]:
+            h.iloc[-1, h.columns.get_loc(f"pts_{k}")] = signals[k]["points"]
+        h["score"] = h[pts_cols].sum(axis=1)
         hist = {"dates": [d.date().isoformat() for d in h.index]}
         for col in ["score", "vix", "fng", "breadth", "wma", "spx"]:
             hist[col] = [None if pd.isna(v) else round(float(v), 2) for v in h[col]]
+        for col in pts_cols:
+            hist[col] = [int(v) for v in h[col]]
 
     out = clean({
         "generated_at": datetime.now().astimezone().isoformat(timespec="minutes"),

@@ -318,19 +318,58 @@
       <p class="hint">Click any day on the score or S&amp;P chart to pick a different date. "—" means not enough time has passed yet.</p>`;
   }
 
+  // ---------- returns breakdown: by tier, by total score, or by each signal's points ----------
+  const STATS_VIEWS = [["tiers", "By tier"], ["score", "Score 0–12"], ["vix", "VIX"],
+    ["fear_greed", "Fear & Greed"], ["breadth", "Breadth"], ["wma200", "200-wk MA"]];
+  let statsView = "tiers";
+  try { const v = localStorage.getItem("pep-stats-view"); if (STATS_VIEWS.some(([k]) => k === v)) statsView = v; } catch (e) {}
+  { const v = new URLSearchParams(location.search).get("stats"); if (STATS_VIEWS.some(([k]) => k === v)) statsView = v; }
+
+  function statsGroups(view) {
+    if (view === "tiers") {
+      return {
+        series: H.score, head: "Pep tier when you bought",
+        hint: "Average S&P 500 return after buying on a day in each Pep tier, compared with buying on any day.",
+        groups: tiersAsc.map((t, gi) => ({
+          label: `${t.emoji} ${t.name}`, c: tierColor(t),
+          test: (s) => s >= t.min && (!tiersAsc[gi + 1] || s < tiersAsc[gi + 1].min),
+        })).reverse(),
+      };
+    }
+    if (view === "score") {
+      const groups = [];
+      for (let s = D.max_total; s >= 0; s--) {
+        const t = tierFor(s);
+        groups.push({ label: `${s}/12 · ${t.emoji} ${t.name}`, c: tierColor(t), test: (v) => v === s });
+      }
+      return { series: H.score, head: "Pep Score when you bought",
+        hint: "Average S&P 500 return after buying on a day with each total Pep Score.", groups };
+    }
+    const sig = D.signals[view];
+    const groups = [3, 2, 1, 0].map((p) => {
+      const lvl = sig.levels.find((l) => l.points === p);
+      let rule = lvl ? levelText(lvl) : "none of the rules";
+      if (view === "vix" && p === sig.spike_rule?.points) rule += ` or spike ≥${sig.spike_rule.level} in ${sig.spike_rule.lookback_days}d`;
+      return { label: `+${p} · ${rule}`, c: `var(--heat-${p})`, test: (v) => v === p };
+    });
+    return { series: H["pts_" + view], head: `${sig.label}: points when you bought`,
+      hint: `Average S&P 500 return after buying on a day when ${sig.label} scored each level, on its own (ignoring the other three signals).`, groups };
+  }
+
   function renderStats() {
     const el = $("#stats");
     if (!el || !H.score) return;
-    const n = H.score.length;
-    const groups = tiersAsc.map((t, gi) => ({
-      label: `${t.emoji} ${t.name}`, c: tierColor(t),
-      test: (s) => s >= t.min && (!tiersAsc[gi + 1] || s < tiersAsc[gi + 1].min),
-    })).reverse();
-    groups.push({ label: "Any day (baseline)", c: "var(--text-2)", test: () => true, base: true });
+    $("#stats-by").innerHTML = STATS_VIEWS.map(([k, l]) => `<button type="button" data-v="${k}" aria-pressed="${k === statsView}">${l}</button>`).join("");
+    const view = statsGroups(statsView);
+    $("#stats-hint").textContent = view.hint;
+    const series = view.series;
+    if (!series) { el.innerHTML = `<p class="hint">No per-signal history yet. Run update.py to generate it.</p>`; return; }
+    const n = series.length;
+    const groups = view.groups.concat([{ label: "Any day (baseline)", c: "var(--text-2)", test: () => true, base: true }]);
 
     const rows = groups.map((g) => {
       const idx = [];
-      for (let i = 0; i < n; i++) if (H.score[i] != null && g.test(H.score[i])) idx.push(i);
+      for (let i = 0; i < n; i++) if (series[i] != null && g.test(series[i])) idx.push(i);
       const cells = FWD.map(([, k]) => {
         const rs = idx.map((i) => fwdRet(i, k)).filter((r) => r != null);
         return rs.length ? { avg: rs.reduce((a, b) => a + b, 0) / rs.length, n: rs.length, win: rs.filter((r) => r > 0).length / rs.length } : null;
@@ -345,7 +384,7 @@
     }).join("");
 
     el.innerHTML = `<table>
-      <thead><tr><th>Score on the day you bought</th><th class="num">Days</th>
+      <thead><tr><th>${esc(view.head)}</th><th class="num">Days</th>
         ${FWD.map(([l]) => `<th class="num">Avg ${l}</th>`).join("")}
         <th class="num">1-year winners</th><th class="num">1-year samples</th></tr></thead>
       <tbody>${rows}</tbody></table>`;
@@ -387,6 +426,12 @@
       (D.fng_archive_until ? ` Fear & Greed before ${fmtDate(D.fng_cnn_start)} is from an unofficial archive.` : "");
     renderPick();
     renderStats();
+    $("#stats-by").addEventListener("click", (e) => {
+      const b = e.target.closest("button"); if (!b) return;
+      statsView = b.dataset.v;
+      try { localStorage.setItem("pep-stats-view", statsView); } catch (e2) {}
+      renderStats();
+    });
   }
 
   // ---------- watchlist ----------
