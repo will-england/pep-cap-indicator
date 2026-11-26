@@ -112,7 +112,7 @@ def main():
                                  count=wma["n_hits"], eligible=wma["n_eligible"], as_of=wma["as_of"],
                                  knives=wma["n_knives"],
                                  detail=f"{wma['n_hits']} of {wma['n_eligible']} names within {sc['wma200']['near_pct']}% or below"
-                                        + (f" · {wma['n_knives']} 🔪 >{sc['wma200'].get('knife_pct', 20)}% below" if wma["n_knives"] else ""))
+                                        + (f" · {wma['n_knives']} more than {sc['wma200'].get('knife_pct', 20)}% below" if wma["n_knives"] else ""))
     else:
         signals["wma200"] = dict(value=None, points=0)
 

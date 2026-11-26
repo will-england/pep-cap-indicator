@@ -3,95 +3,124 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pep Capital Signal</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚛</text></svg>">
+  <title>Pep Capital Terminal</title>
+  <meta name="description" content="Pep Capital Buy Signal Terminal: a tongue-in-cheek buy-the-fear market indicator.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%2312355b'/><text x='50' y='72' font-family='monospace' font-weight='700' font-size='64' fill='%23ffb000' text-anchor='middle'>P</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="top">
-    <div class="brand">
-      <span class="logo">PEP<span>CAPITAL</span></span>
-      <span class="sub">Buy Signal Terminal™</span>
-    </div>
-    <div class="meta">
-      <span id="updated"></span>
-      <button id="theme" class="ghost" aria-label="Toggle light/dark theme">◐</button>
-    </div>
+  <header class="cmd">
+    <span class="logo">PEP CAPITAL</span>
+    <span class="go">PEP &lt;GO&gt;</span>
+    <span class="title">BUY SIGNAL TERMINAL</span>
+    <span class="sp"></span>
+    <span id="clock" class="clock"></span>
+    <span class="live" title="Data refreshes each weekday after the US close">EOD FEED</span>
   </header>
+
+  <nav class="fkeys" aria-label="Sections">
+    <a href="#p-score"><b>1)</b> SCORE</a>
+    <a href="#p-signals"><b>2)</b> SIGNALS</a>
+    <a href="#p-history"><b>3)</b> HISTORY</a>
+    <a href="#p-returns"><b>4)</b> RETURNS</a>
+    <a href="#p-shop"><b>5)</b> SHOPPING LIST</a>
+    <a href="#p-help"><b>99)</b> HELP</a>
+    <span class="sp"></span>
+    <span class="range-lbl">RANGE</span>
+    <div id="range" class="seg" role="group" aria-label="Chart range"></div>
+  </nav>
+
+  <div class="tape" aria-hidden="true"><span id="tape"></span></div>
 
   <main>
     <div id="warnings"></div>
 
-    <section class="hero card">
-      <div class="gauge-wrap">
-        <svg id="gauge" viewBox="0 0 240 140" role="img" aria-label="Pep score gauge"></svg>
-        <div class="score"><span id="total">–</span><small>/12</small></div>
-      </div>
-      <div class="verdict">
-        <div class="eyebrow">Today's verdict</div>
-        <h1 id="tier-name">Loading…</h1>
-        <p id="tier-tagline" class="tagline"></p>
-        <ol id="ladder" class="ladder"></ol>
-      </div>
-    </section>
-
-    <section>
-      <h2>The four horsemen</h2>
-      <div id="signals" class="grid"></div>
-    </section>
-
-    <section class="card">
-      <div class="card-head">
-        <div>
-          <h2>Pep Score history</h2>
-          <span class="hint">Daily score using the same rules as today</span>
+    <div class="grid2">
+      <section class="panel" id="p-score">
+        <h2>01) PEP SCORE <small id="asof"></small></h2>
+        <div class="body">
+          <div class="meter" id="meter" aria-hidden="true"></div>
+          <div class="score-row">
+            <div class="total"><span id="total">–</span><span class="dim"> / 12</span></div>
+            <div>
+              <div class="tier" id="tier-name">LOADING</div>
+              <div class="tagline" id="tier-tagline"></div>
+            </div>
+          </div>
+          <div class="ladder" id="ladder"></div>
         </div>
-        <div id="range" class="seg" role="group" aria-label="Chart range"></div>
-      </div>
-      <div id="score-chart" class="chart tall"></div>
-      <div class="card-head sub-head">
-        <h3>S&amp;P 500</h3>
-        <span class="hint">For context, same dates</span>
-      </div>
-      <div id="spx-chart" class="chart"></div>
-      <div id="pick" class="pick"></div>
+      </section>
+
+      <section class="panel" id="p-monitor">
+        <h2>02) SIGNAL MONITOR <small>1Y SPARK</small></h2>
+        <div class="body">
+          <div class="table-wrap"><table id="monitor"></table></div>
+          <p class="note">Each signal scores 0–3 points (12 total). <span class="hit">RULE</span> = the rule a signal is hitting right now.</p>
+        </div>
+      </section>
+    </div>
+
+    <section id="p-signals">
+      <div class="grid2" id="signals"></div>
     </section>
 
-    <section class="card">
-      <div class="card-head">
-        <h2>Does buying the fear actually work?</h2>
-        <div id="stats-by" class="seg" role="group" aria-label="Break down returns by"></div>
+    <section class="panel" id="p-history">
+      <h2>04) PEP SCORE HISTORY <small>CLICK A DAY</small></h2>
+      <div class="body">
+        <p class="note" id="history-hint"></p>
+        <div id="score-chart" class="chart tall"></div>
+        <h3 class="sub">S&amp;P 500 <span class="dim">· SAME DATES</span></h3>
+        <div id="spx-chart" class="chart"></div>
+        <div id="pick" class="pick"></div>
       </div>
-      <p class="hint" id="stats-hint">Average S&amp;P 500 return after buying on a day with each Pep tier, compared with buying on any random day.</p>
-      <div id="stats" class="table-wrap"></div>
-      <p class="hint" id="stats-note" style="margin-top:10px"></p>
     </section>
 
-    <section class="card">
-      <div class="card-head">
-        <h2>The "good companies" shopping list</h2>
-        <label class="toggle"><input type="checkbox" id="only-near"> Only show names near or below the 200-week MA</label>
+    <section class="panel" id="p-returns">
+      <h2>05) DOES BUYING THE FEAR WORK? <small>FWD S&amp;P RETURNS</small></h2>
+      <div class="body">
+        <div class="toolbar"><span class="range-lbl">VIEW</span><div id="stats-by" class="seg" role="group" aria-label="Break down returns by"></div></div>
+        <p class="note" id="stats-hint"></p>
+        <div id="stats" class="table-wrap"></div>
+        <p class="note" id="stats-note"></p>
       </div>
-      <p class="hint" id="wl-summary"></p>
-      <div id="sector-chips" class="chips" role="group" aria-label="Filter by sector"></div>
-      <div class="table-wrap">
-        <table id="watchlist">
-          <thead>
-            <tr><th>Ticker</th><th>Sector</th><th class="num">Price</th><th class="num">200-wk MA</th><th class="bar-col">Distance from 200-week MA</th><th>Status</th></tr>
-          </thead>
-          <tbody></tbody>
-        </table>
+    </section>
+
+    <section class="panel" id="p-shop">
+      <h2>06) SHOPPING LIST · GOOD COMPANIES VS 200-WK MA <small id="wl-count"></small></h2>
+      <div class="body">
+        <p class="note" id="wl-summary"></p>
+        <div id="sector-chips" class="chips" role="group" aria-label="Filter by sector"></div>
+        <label class="toggle"><input type="checkbox" id="only-near"> ONLY SHOW NAMES AT OR BELOW THE 200-WK MA</label>
+        <div class="table-wrap">
+          <table id="watchlist">
+            <thead>
+              <tr><th>TICKER</th><th>SECTOR</th><th class="num">LAST</th><th class="num">200W MA</th><th class="bar-col">DISTANCE FROM 200-WK MA</th><th>STATUS</th></tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
       </div>
+    </section>
+
+    <section class="panel" id="p-help">
+      <h2>99) HELP <small>HOW THIS WORKS</small></h2>
+      <div class="body help" id="help"></div>
     </section>
   </main>
 
-  <footer>
-    Not financial advice. Pep Capital is not a registered anything. Data: Yahoo Finance, CNN, Wikipedia.
-    Refresh with <code>update.bat</code>.
+  <footer class="status">
+    <span><b>F1</b> HELP</span>
+    <span><b>F8</b> EQUITY</span>
+    <span><b>ESC</b> TOUCH GRASS</span>
+    <span class="sp"></span>
+    <span>SRC: YAHOO · CNN · WIKIPEDIA · NOT FINANCIAL ADVICE</span>
   </footer>
 
   <div id="no-data" class="no-data" hidden>
-    <h2>No data yet</h2>
+    <h2>NO DATA</h2>
     <p>Run <code>update.bat</code> in the project folder, then refresh this page.</p>
   </div>
 

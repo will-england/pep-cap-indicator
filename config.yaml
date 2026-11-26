@@ -52,9 +52,9 @@ signals:
 
 tiers:                           # total score 0-12
   - { min: 9, name: "BACK UP THE TRUCK", emoji: "🚛", tagline: "Generational. Sell a kidney. (Don't sell a kidney.)" }
-  - { min: 6, name: "Pep Rally",         emoji: "📣", tagline: "Blood in the streets. Start nibbling." }
-  - { min: 3, name: "Pep Talk",          emoji: "🗣️", tagline: "Things are getting spicy. Build the shopping list." }
-  - { min: 0, name: "Touch Grass",       emoji: "🌱", tagline: "Nothing to see here. Go outside." }
+  - { min: 6, name: "Pep Rally",         emoji: "", tagline: "Blood in the streets. Start nibbling." }
+  - { min: 3, name: "Pep Talk",          emoji: "", tagline: "Things are getting spicy. Build the shopping list." }
+  - { min: 0, name: "Touch Grass",       emoji: "", tagline: "Nothing to see here. Go outside." }
 
 watchlist:
   - MSFT
@@ -167,6 +167,13 @@ watchlist:
   - UNP
   - HON
   - WM
+  - SNDK
+  - OKTA
+  - NOW
+  - CAKE
+  - HLT
+  - VAC
+  - SPHR
 
 # Sector tags are looked up automatically (Yahoo) and cached in data/cache_sectors.json.
 # Override any you disagree with here.

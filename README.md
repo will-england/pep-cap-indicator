@@ -50,7 +50,9 @@ If a push gets rejected ("fetch first"), run `git pull --rebase` and push again.
 - **"If you'd bought…":** click any day on the score or S&P chart to see the S&P 500's return 1 month, 3 months, 6 months and 1 year later, to today, and its worst dip in the following year.
 - **"Does buying the fear actually work?":** average forward S&P returns by tier, compared with buying on any day.
 - **Shopping list:** every watchlist name's distance from its 200-week MA.
-- **Light and dark mode:** follows your system setting, with a toggle in the top right.
+- **"Midnight Wire" terminal look:** navy panels with blue header strips, amber values, IBM Plex Sans and Mono, numbered panels and a scrolling ticker tape.
+  - The function keys at the top jump to sections. Press **F1** for help and **Esc** to go back to the top.
+  - The range picker in the top bar sets the range for every chart.
 
 ## How it runs (GitHub Pages + Actions)
 
