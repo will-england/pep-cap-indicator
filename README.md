@@ -64,6 +64,10 @@ If a push gets rejected ("fetch first"), run `git pull --rebase` and push again.
 
 **If the "Updated" time on the site stops changing:** GitHub can disable scheduled workflows in public repos after 60 days without activity. Check the Actions tab and re-enable the workflow if needed.
 
+**If the site shows this README instead of the dashboard:** the Pages source got reset to "Deploy from a branch". This happens if the repo is made private and then public again. Fix it in either place, then run the workflow:
+- **Website:** repo **Settings → Pages → Build and deployment → Source: GitHub Actions**
+- **Command line:** `gh api -X PUT repos/will-england/pep-cap-indicator/pages -f build_type=workflow`
+
 ## Making changes
 
 ```
