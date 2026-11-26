@@ -50,7 +50,7 @@
     vix:        { code: "VIX",        key: "vix",     fmt: (v) => v.toFixed(2), unit: "",          yMin: 0, yMax: (h) => Math.max(50, ...h.filter((v) => v != null)) },
     fear_greed: { code: "FEAR/GREED", key: "fng",     fmt: (v) => v.toFixed(0), unit: " / 100",    yMin: 0, yMax: () => 100 },
     breadth:    { code: "%SPX>200D",  key: "breadth", fmt: (v) => v.toFixed(1) + "%", unit: "",   yMin: 0, yMax: () => 100 },
-    wma200:     { code: "GOOD<200W",  key: "wma",     fmt: (v) => v.toFixed(1) + "%", unit: " OF LIST", yMin: 0, yMax: (h) => Math.max(60, ...h.filter((v) => v != null)) },
+    wma200:     { code: "PEP LIST<200W", key: "wma",     fmt: (v) => v.toFixed(1) + "%", unit: " OF LIST", yMin: 0, yMax: (h) => Math.max(60, ...h.filter((v) => v != null)) },
   };
   const levelVal = (l) => l.min ?? l.max ?? l.below ?? l.above;
   const levelText = (l) => {
@@ -372,7 +372,7 @@
     });
   }
 
-  // ---------- 06 shopping list ----------
+  // ---------- 06 the Pep List ----------
   const near = D.near_pct, knife = D.knife_pct ?? 20;
   const DMIN = -40, DMAX = 80;
   const pos = (v) => ((Math.max(DMIN, Math.min(DMAX, v)) - DMIN) / (DMAX - DMIN)) * 100;
@@ -471,7 +471,7 @@
       <li><b>VIX</b>: Wall Street's fear gauge. High readings, or a spike above 40, score points.</li>
       <li><b>CNN Fear &amp; Greed</b>: extreme fear (below 25) scores points.</li>
       <li><b>% of S&amp;P 500 above its 200-day MA</b>: when 30% or fewer are, the selling is broad.</li>
-      <li><b>Good companies at their 200-week MA</b>: how much of our quality watchlist is trading at, or below, its 4-year average.</li>
+      <li><b>The Pep List at its 200-week MA</b>: how much of our hand-picked watchlist is trading at, or below, its 4-year average.</li>
     </ul>
     <h3>Tiers</h3><ul>${tierLines}</ul>
     <h3>Data</h3>

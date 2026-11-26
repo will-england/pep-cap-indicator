@@ -41,8 +41,8 @@ signals:
       - { points: 1, max: 50 }
 
   wma200:
-    label: "Good companies at 200-week MA"
-    blurb: "Quality names trading at (or within a hair of) their 200-week average."
+    label: "The Pep List at 200-week MA"
+    blurb: "Pep List names trading at (or within a hair of) their 200-week average."
     near_pct: 5                  # "at" the 200WMA = price no more than 5% above it
     knife_pct: 20                # >20% below the 200WMA gets a "falling knife?" flag (still counts toward the score)
     levels:                      # value = % of eligible watchlist names at/below
