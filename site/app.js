@@ -32,9 +32,9 @@
   // ---------- 01 score ----------
   const tier = D.tier;
   const tc = tierColor(tier);
-  // segmented meter: one block per point, each colored by the tier that point falls in
+  // segmented meter: one block per point; every lit block takes today's tier color
   $("#meter").innerHTML = Array.from({ length: D.max_total }, (_, i) =>
-    `<i class="${i < D.total ? "on" : ""}" style="--c:${tierColor(tierFor(i))}"></i>`).join("");
+    `<i class="${i < D.total ? "on" : ""}" style="--c:${tc}"></i>`).join("");
   $("#total").textContent = D.total;
   $("#tier-name").textContent = tierLabel(tier);
   $("#tier-name").style.color = tc;
