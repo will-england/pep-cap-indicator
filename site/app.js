@@ -49,16 +49,24 @@
   const SIG = {
     vix:        { code: "VIX",        key: "vix",     fmt: (v) => v.toFixed(2), unit: "",          yMin: 0, yMax: (h) => Math.max(50, ...h.filter((v) => v != null)) },
     fear_greed: { code: "FEAR/GREED", key: "fng",     fmt: (v) => v.toFixed(0), unit: " / 100",    yMin: 0, yMax: () => 100 },
-    breadth:    { code: "%SPX>200D",  key: "breadth", fmt: (v) => v.toFixed(1) + "%", unit: "",   yMin: 0, yMax: () => 100 },
-    wma200:     { code: "PEP LIST<200W", key: "wma",     fmt: (v) => v.toFixed(1) + "%", unit: " OF LIST", yMin: 0, yMax: (h) => Math.max(60, ...h.filter((v) => v != null)) },
+    breadth:    { code: "%SPX>200D",  key: "breadth", fmt: (v) => v.toFixed(1) + "%", unit: "",   yMin: 0, yMax: () => 100, pct: true },
+    // The Pep List: thresholds are % of eligible names (+3/+2) or a name count (+1), so show the count up top
+    // and spell out both forms in the rules.
+    wma200:     { code: "PEP LIST<200W", key: "wma",     fmt: (v) => v.toFixed(1) + "%", unit: "", yMin: 0, yMax: (h) => Math.max(60, ...h.filter((v) => v != null)), pct: true,
+                  headline: (s) => `${s.count}<small> / ${s.eligible} NAMES</small>`,
+                  short: (s) => `${s.count}/${s.eligible}`,
+                  detail: (s) => `${s.value.toFixed(1)}% of the list at or below its 200-week MA` +
+                    (s.knives ? ` · ${s.knives} more than ${D.knife_pct ?? 20}% below` : "") },
   };
+  const ELIGIBLE = D.signals.wma200 && D.signals.wma200.eligible;
   const levelVal = (l) => l.min ?? l.max ?? l.below ?? l.above;
-  const levelText = (l) => {
+  // k = signal id, so percent thresholds get a "%" and Pep List % rules get their name-count equivalent
+  const levelText = (l, k) => {
+    const u = k && SIG[k] && SIG[k].pct ? "%" : "";
     if (l.min_count != null) return `≥${l.min_count} name${l.min_count > 1 ? "s" : ""}`;
-    if (l.min != null) return `≥${l.min}`;
-    if (l.max != null) return `≤${l.max}`;
-    if (l.below != null) return `<${l.below}`;
-    return `>${l.above}`;
+    let t = l.min != null ? `≥${l.min}${u}` : l.max != null ? `≤${l.max}${u}` : l.below != null ? `<${l.below}${u}` : `>${l.above}${u}`;
+    if (k === "wma200" && l.min != null && ELIGIBLE) t += ` (${Math.ceil((l.min / 100) * ELIGIBLE)} names)`;
+    return t;
   };
   const pipsHtml = (p) => `<span class="pips" aria-label="${p} of 3 points">${[1, 2, 3].map((k) => `<i class="${p >= k ? "on" : ""}"></i>`).join("")}<b>+${p}</b></span>`;
   const spark = (arr, w = 120, h = 22) => {
@@ -74,9 +82,9 @@
     Object.entries(D.signals).map(([k, s]) => {
       const c = SIG[k];
       const hitL = s.levels.find((l) => l.points === s.points && s.points > 0);
-      let rule = s.spike ? `SPIKE≥${s.spike_rule.level}` : hitL ? levelText(hitL) : "—";
+      let rule = s.spike ? `SPIKE≥${s.spike_rule.level}` : hitL ? levelText(hitL, k) : "—";
       return `<tr><td class="lbl-cell">${c.code}</td>
-        <td class="num">${s.value == null ? "N/A" : c.fmt(s.value)}</td>
+        <td class="num">${s.value == null ? "N/A" : c.short ? c.short(s) : c.fmt(s.value)}</td>
         <td>${s.points ? `<span class="hit">${esc(rule)}</span>` : `<span class="dim">${esc(rule)}</span>`}</td>
         <td>${pipsHtml(s.points)}</td>
         <td class="spark">${spark((H[c.key] || []).slice(-252))}</td></tr>`;
@@ -216,14 +224,14 @@
     const cfg = SIG[id];
     const panel = document.createElement("section");
     panel.className = "panel sig";
-    let rules = s.levels.map((l) => `<span class="rule ${s.points && l.points === s.points ? "hit" : ""}">${esc(levelText(l))} → +${l.points}</span>`).join("");
+    let rules = s.levels.map((l) => `<span class="rule ${s.points && l.points === s.points ? "hit" : ""}">${esc(levelText(l, id))} → +${l.points}</span>`).join("");
     if (s.spike_rule) rules += `<span class="rule ${s.spike ? "hit" : ""}">SPIKE ≥${s.spike_rule.level} IN ${s.spike_rule.lookback_days}D → +${s.spike_rule.points}</span>`;
     const badges = (s.spike ? `<span class="badge">SPIKE</span>` : "") + (s.stale ? `<span class="badge stale">STALE</span>` : "");
     panel.innerHTML = `
       <h2>03${"ABCD"[idx]}) ${esc(s.label)} <small>${pipsHtml(s.points)}</small></h2>
       <div class="body">
-        <div class="top"><div class="value">${s.value == null ? "N/A" : cfg.fmt(s.value)}<small>${cfg.unit}</small>${badges}</div></div>
-        <div class="detail">${esc(s.detail || "")}</div>
+        <div class="top"><div class="value">${s.value == null ? "N/A" : cfg.headline ? cfg.headline(s) : `${cfg.fmt(s.value)}<small>${cfg.unit}</small>`}${badges}</div></div>
+        <div class="detail">${esc(s.value != null && cfg.detail ? cfg.detail(s) : s.detail || "")}</div>
         <div class="chart"></div>
         <div class="rules">${rules}</div>
         <p class="blurb">${esc(s.blurb)}</p>
@@ -242,7 +250,8 @@
         else bands.push({ from: 0, to: levelVal(strong) });
       }
       return { dates: sub(H.dates, sl), values: vals, yMin: cfg.yMin, yMax, bands, thresholds,
-        ticks: [0, ...thresholds].sort((a, b) => a - b), label: s.label, fmt: (v) => cfg.fmt(v) };
+        ticks: [0, ...thresholds].sort((a, b) => a - b), label: s.label, fmt: (v) => cfg.fmt(v),
+        tickFmt: cfg.pct ? (v) => v + "%" : undefined };
     });
   });
 
@@ -301,7 +310,7 @@
     const sig = D.signals[view];
     const groups = [3, 2, 1, 0].map((p) => {
       const lvl = sig.levels.find((l) => l.points === p);
-      let rule = lvl ? levelText(lvl) : "no rule hit";
+      let rule = lvl ? levelText(lvl, view) : "no rule hit";
       if (view === "vix" && p === sig.spike_rule?.points) rule += ` or spike ≥${sig.spike_rule.level} in ${sig.spike_rule.lookback_days}d`;
       return { label: `+${p} · ${rule}`, c: `var(--heat-${p})`, test: (v) => v === p };
     });
