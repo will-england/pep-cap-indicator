@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-27T03:45+00:00",
-  "total": 6,
+  "generated_at": "2026-11-27T18:59+00:00",
+  "total": 3,
   "max_total": 12,
   "tier": {
-    "min": 6,
-    "name": "Pep Rally",
+    "min": 3,
+    "name": "Pep Talk",
     "emoji": "",
-    "tagline": "Blood in the streets. Start nibbling."
+    "tagline": "Things are getting spicy. Build the shopping list."
   },
   "tiers": [
     {
@@ -36,12 +36,12 @@
   ],
   "signals": {
     "vix": {
-      "value": 26.799999237060547,
-      "points": 3,
-      "spike": true,
-      "recent_high": 40.029998779296875,
-      "as_of": "2026-11-26",
-      "detail": "5-day high 40.0 \u2014 SPIKE!",
+      "value": 23.809999465942383,
+      "points": 0,
+      "spike": false,
+      "recent_high": 35.08000183105469,
+      "as_of": "2026-11-27",
+      "detail": "5-day high 35.1",
       "label": "VIX",
       "blurb": "Wall Street's fear gauge. 40+ means people are panicking.",
       "levels": [
@@ -65,12 +65,12 @@
       }
     },
     "fear_greed": {
-      "value": 14.9967450271248,
+      "value": 24.8571428571429,
       "points": 2,
       "rating": "extreme fear",
       "stale": false,
-      "as_of": "2026-11-26",
-      "detail": "Extreme Fear \u00b7 1w ago 16 \u00b7 1m ago 30",
+      "as_of": "2026-11-27",
+      "detail": "Extreme Fear \u00b7 1w ago 19 \u00b7 1m ago 33",
       "label": "CNN Fear & Greed",
       "blurb": "Be greedy when others are fearful. Extreme fear is below 25.",
       "levels": [
@@ -89,9 +89,9 @@
       ]
     },
     "breadth": {
-      "value": 58.517034068136276,
+      "value": 62.32464929859719,
       "points": 0,
-      "as_of": "2026-11-25",
+      "as_of": "2026-11-27",
       "detail": "499 of 503 members counted",
       "label": "% of S&P 500 above 200-day MA",
       "blurb": "When most stocks are below trend, the selling is broad. 30% or less is washed out.",
@@ -111,13 +111,13 @@
       ]
     },
     "wma200": {
-      "value": 16.9811320754717,
+      "value": 15.09433962264151,
       "points": 1,
-      "count": 18,
+      "count": 16,
       "eligible": 106,
       "as_of": "2026-11-23",
-      "knives": 6,
-      "detail": "18 of 106 names within 5% or below \u00b7 6 more than 20% below",
+      "knives": 5,
+      "detail": "16 of 106 names within 5% or below \u00b7 5 more than 20% below",
       "label": "The Pep List at 200-week MA",
       "blurb": "Pep List names trading at (or within a hair of) their 200-week average.",
       "levels": [
@@ -143,961 +143,961 @@
   "watchlist": [
     {
       "ticker": "NKE",
-      "price": 36.66,
+      "price": 37.32,
       "wma200": 74.19,
-      "dist_pct": -50.59,
+      "dist_pct": -49.7,
       "weeks": 1040,
       "status": "knife",
       "sector": "Consumer Discretionary"
     },
     {
       "ticker": "COIN",
-      "price": 103.72,
-      "wma200": 190.7,
-      "dist_pct": -45.61,
+      "price": 107.04,
+      "wma200": 190.72,
+      "dist_pct": -43.88,
       "weeks": 294,
       "status": "knife",
       "sector": "Financials"
     },
     {
       "ticker": "NOW",
-      "price": 92.16,
+      "price": 92.8,
       "wma200": 145.04,
-      "dist_pct": -36.46,
+      "dist_pct": -36.02,
       "weeks": 753,
       "status": "knife",
       "sector": "Technology"
     },
     {
       "ticker": "IREN",
-      "price": 12.85,
+      "price": 13.61,
       "wma200": 19.18,
-      "dist_pct": -32.99,
+      "dist_pct": -29.04,
       "weeks": 263,
       "status": "knife",
       "sector": "Technology"
     },
     {
       "ticker": "ORCL",
-      "price": 103.88,
-      "wma200": 148.98,
-      "dist_pct": -30.27,
+      "price": 107.13,
+      "wma200": 149.0,
+      "dist_pct": -28.1,
       "weeks": 1040,
       "status": "knife",
       "sector": "Technology"
     },
     {
       "ticker": "NFLX",
-      "price": 59.41,
-      "wma200": 74.65,
-      "dist_pct": -20.42,
+      "price": 60.93,
+      "wma200": 74.66,
+      "dist_pct": -18.39,
       "weeks": 1040,
-      "status": "knife",
+      "status": "below",
       "sector": "Communication Services"
     },
     {
       "ticker": "UNH",
-      "price": 346.19,
-      "wma200": 426.14,
-      "dist_pct": -18.76,
+      "price": 351.41,
+      "wma200": 426.17,
+      "dist_pct": -17.54,
       "weeks": 1040,
       "status": "below",
       "sector": "Health Care"
     },
     {
       "ticker": "BA",
-      "price": 164.53,
-      "wma200": 200.06,
-      "dist_pct": -17.76,
+      "price": 167.24,
+      "wma200": 200.08,
+      "dist_pct": -16.41,
       "weeks": 1040,
       "status": "below",
       "sector": "Industrials"
     },
     {
       "ticker": "BKNG",
-      "price": 149.5,
-      "wma200": 162.68,
-      "dist_pct": -8.1,
+      "price": 150.39,
+      "wma200": 162.69,
+      "dist_pct": -7.56,
       "weeks": 1040,
       "status": "below",
       "sector": "Consumer Discretionary"
     },
     {
       "ticker": "PEP",
-      "price": 143.93,
+      "price": 144.6,
       "wma200": 148.12,
-      "dist_pct": -2.83,
+      "dist_pct": -2.38,
       "weeks": 1040,
       "status": "below",
       "sector": "Consumer Staples"
     },
     {
       "ticker": "UBER",
-      "price": 66.35,
-      "wma200": 68.23,
-      "dist_pct": -2.76,
+      "price": 66.63,
+      "wma200": 68.24,
+      "dist_pct": -2.35,
       "weeks": 395,
       "status": "below",
       "sector": "Technology"
     },
     {
       "ticker": "ABT",
-      "price": 108.0,
+      "price": 108.07,
       "wma200": 107.88,
-      "dist_pct": 0.11,
+      "dist_pct": 0.17,
       "weeks": 1040,
       "status": "at",
       "sector": "Health Care"
     },
     {
       "ticker": "ISRG",
-      "price": 427.18,
-      "wma200": 426.53,
-      "dist_pct": 0.15,
-      "weeks": 1040,
-      "status": "at",
-      "sector": "Health Care"
-    },
-    {
-      "ticker": "SYK",
-      "price": 332.9,
-      "wma200": 328.22,
-      "dist_pct": 1.43,
+      "price": 430.18,
+      "wma200": 426.55,
+      "dist_pct": 0.85,
       "weeks": 1040,
       "status": "at",
       "sector": "Health Care"
     },
     {
       "ticker": "AMT",
-      "price": 184.59,
+      "price": 184.93,
       "wma200": 181.59,
-      "dist_pct": 1.65,
+      "dist_pct": 1.84,
       "weeks": 1040,
       "status": "at",
       "sector": "Real Estate"
     },
     {
+      "ticker": "SYK",
+      "price": 334.27,
+      "wma200": 328.22,
+      "dist_pct": 1.84,
+      "weeks": 1040,
+      "status": "at",
+      "sector": "Health Care"
+    },
+    {
       "ticker": "MCD",
-      "price": 283.5,
+      "price": 282.62,
       "wma200": 275.88,
-      "dist_pct": 2.76,
+      "dist_pct": 2.44,
       "weeks": 1040,
       "status": "at",
       "sector": "Consumer Discretionary"
     },
     {
       "ticker": "DVN",
-      "price": 42.45,
+      "price": 42.84,
       "wma200": 40.7,
-      "dist_pct": 4.31,
+      "dist_pct": 5.26,
       "weeks": 1040,
-      "status": "at",
+      "status": "above",
       "sector": "Energy"
     },
     {
-      "ticker": "ETN",
-      "price": 317.81,
-      "wma200": 302.97,
-      "dist_pct": 4.9,
-      "weeks": 1040,
-      "status": "at",
-      "sector": "Industrials"
-    },
-    {
-      "ticker": "FCX",
-      "price": 48.55,
-      "wma200": 45.92,
-      "dist_pct": 5.74,
-      "weeks": 1040,
-      "status": "above",
-      "sector": "Materials"
-    },
-    {
       "ticker": "LOW",
-      "price": 235.65,
-      "wma200": 221.37,
-      "dist_pct": 6.45,
+      "price": 236.46,
+      "wma200": 221.38,
+      "dist_pct": 6.81,
       "weeks": 1040,
       "status": "above",
       "sector": "Consumer Discretionary"
     },
     {
+      "ticker": "ETN",
+      "price": 325.92,
+      "wma200": 303.01,
+      "dist_pct": 7.56,
+      "weeks": 1040,
+      "status": "above",
+      "sector": "Industrials"
+    },
+    {
       "ticker": "CEG",
-      "price": 235.28,
-      "wma200": 219.85,
-      "dist_pct": 7.02,
+      "price": 238.1,
+      "wma200": 219.86,
+      "dist_pct": 8.29,
       "weeks": 254,
       "status": "above",
       "sector": "Utilities"
     },
     {
       "ticker": "HD",
-      "price": 361.26,
-      "wma200": 333.94,
-      "dist_pct": 8.18,
+      "price": 362.15,
+      "wma200": 333.95,
+      "dist_pct": 8.44,
       "weeks": 1040,
       "status": "above",
       "sector": "Consumer Discretionary"
     },
     {
       "ticker": "MDLZ",
-      "price": 67.81,
+      "price": 67.77,
       "wma200": 62.09,
-      "dist_pct": 9.21,
+      "dist_pct": 9.14,
       "weeks": 1040,
       "status": "above",
       "sector": "Consumer Staples"
     },
     {
       "ticker": "PLD",
-      "price": 127.03,
+      "price": 126.95,
       "wma200": 115.6,
-      "dist_pct": 9.89,
+      "dist_pct": 9.82,
       "weeks": 1040,
       "status": "above",
       "sector": "Real Estate"
     },
     {
+      "ticker": "FCX",
+      "price": 50.77,
+      "wma200": 45.93,
+      "dist_pct": 10.54,
+      "weeks": 1040,
+      "status": "above",
+      "sector": "Materials"
+    },
+    {
       "ticker": "HON",
-      "price": 225.1,
-      "wma200": 202.02,
-      "dist_pct": 11.42,
+      "price": 228.48,
+      "wma200": 202.04,
+      "dist_pct": 13.09,
       "weeks": 1040,
       "status": "above",
       "sector": "Industrials"
     },
     {
       "ticker": "F",
-      "price": 12.17,
+      "price": 12.33,
       "wma200": 10.82,
-      "dist_pct": 12.52,
+      "dist_pct": 13.99,
       "weeks": 1040,
       "status": "above",
       "sector": "Consumer Discretionary"
     },
     {
+      "ticker": "O",
+      "price": 60.51,
+      "wma200": 52.67,
+      "dist_pct": 14.89,
+      "weeks": 1040,
+      "status": "above",
+      "sector": "Real Estate"
+    },
+    {
+      "ticker": "T",
+      "price": 23.21,
+      "wma200": 20.1,
+      "dist_pct": 15.5,
+      "weeks": 1040,
+      "status": "above",
+      "sector": "Communication Services"
+    },
+    {
+      "ticker": "SHW",
+      "price": 363.24,
+      "wma200": 313.29,
+      "dist_pct": 15.95,
+      "weeks": 1040,
+      "status": "above",
+      "sector": "Materials"
+    },
+    {
       "ticker": "BKR",
-      "price": 46.36,
-      "wma200": 40.8,
-      "dist_pct": 13.62,
+      "price": 47.47,
+      "wma200": 40.81,
+      "dist_pct": 16.33,
       "weeks": 1040,
       "status": "above",
       "sector": "Energy"
     },
     {
-      "ticker": "T",
-      "price": 22.97,
-      "wma200": 20.09,
-      "dist_pct": 14.31,
-      "weeks": 1040,
-      "status": "above",
-      "sector": "Communication Services"
-    },
-    {
-      "ticker": "O",
-      "price": 60.25,
-      "wma200": 52.67,
-      "dist_pct": 14.4,
-      "weeks": 1040,
-      "status": "above",
-      "sector": "Real Estate"
-    },
-    {
-      "ticker": "SHW",
-      "price": 361.02,
-      "wma200": 313.28,
-      "dist_pct": 15.24,
-      "weeks": 1040,
-      "status": "above",
-      "sector": "Materials"
-    },
-    {
       "ticker": "PG",
-      "price": 173.23,
+      "price": 172.86,
       "wma200": 148.35,
-      "dist_pct": 16.77,
+      "dist_pct": 16.52,
       "weeks": 1040,
       "status": "above",
       "sector": "Consumer Staples"
     },
     {
+      "ticker": "NEE",
+      "price": 84.95,
+      "wma200": 71.65,
+      "dist_pct": 18.56,
+      "weeks": 1040,
+      "status": "above",
+      "sector": "Utilities"
+    },
+    {
       "ticker": "APD",
-      "price": 314.26,
-      "wma200": 268.81,
-      "dist_pct": 16.91,
+      "price": 319.09,
+      "wma200": 268.83,
+      "dist_pct": 18.69,
       "weeks": 1040,
       "status": "above",
       "sector": "Materials"
     },
     {
+      "ticker": "BAC",
+      "price": 49.07,
+      "wma200": 41.17,
+      "dist_pct": 19.19,
+      "weeks": 1040,
+      "status": "above",
+      "sector": "Financials"
+    },
+    {
+      "ticker": "EQIX",
+      "price": 984.87,
+      "wma200": 819.22,
+      "dist_pct": 20.22,
+      "weeks": 1040,
+      "status": "above",
+      "sector": "Real Estate"
+    },
+    {
+      "ticker": "CL",
+      "price": 99.76,
+      "wma200": 82.87,
+      "dist_pct": 20.39,
+      "weeks": 1040,
+      "status": "above",
+      "sector": "Consumer Staples"
+    },
+    {
+      "ticker": "SBUX",
+      "price": 108.8,
+      "wma200": 90.31,
+      "dist_pct": 20.47,
+      "weeks": 1040,
+      "status": "above",
+      "sector": "Consumer Discretionary"
+    },
+    {
+      "ticker": "MSFT",
+      "price": 492.85,
+      "wma200": 407.98,
+      "dist_pct": 20.8,
+      "weeks": 1040,
+      "status": "above",
+      "sector": "Technology"
+    },
+    {
+      "ticker": "NVDA",
+      "price": 150.49,
+      "wma200": 124.52,
+      "dist_pct": 20.85,
+      "weeks": 1040,
+      "status": "above",
+      "sector": "Technology"
+    },
+    {
       "ticker": "META",
-      "price": 609.89,
-      "wma200": 519.39,
-      "dist_pct": 17.42,
+      "price": 628.96,
+      "wma200": 519.49,
+      "dist_pct": 21.07,
       "weeks": 759,
       "status": "above",
       "sector": "Communication Services"
     },
     {
-      "ticker": "BAC",
-      "price": 48.54,
-      "wma200": 41.17,
-      "dist_pct": 17.91,
-      "weeks": 1040,
-      "status": "above",
-      "sector": "Financials"
-    },
-    {
-      "ticker": "NEE",
-      "price": 85.41,
-      "wma200": 71.65,
-      "dist_pct": 19.2,
+      "ticker": "SO",
+      "price": 95.04,
+      "wma200": 78.01,
+      "dist_pct": 21.83,
       "weeks": 1040,
       "status": "above",
       "sector": "Utilities"
     },
     {
-      "ticker": "SBUX",
-      "price": 107.74,
-      "wma200": 90.31,
-      "dist_pct": 19.3,
-      "weeks": 1040,
-      "status": "above",
-      "sector": "Consumer Discretionary"
-    },
-    {
-      "ticker": "EQIX",
-      "price": 978.22,
-      "wma200": 819.18,
-      "dist_pct": 19.41,
-      "weeks": 1040,
-      "status": "above",
-      "sector": "Real Estate"
-    },
-    {
-      "ticker": "NVDA",
-      "price": 149.3,
-      "wma200": 124.52,
-      "dist_pct": 19.9,
-      "weeks": 1040,
-      "status": "above",
-      "sector": "Technology"
-    },
-    {
-      "ticker": "MSFT",
-      "price": 489.93,
-      "wma200": 407.96,
-      "dist_pct": 20.09,
-      "weeks": 1040,
-      "status": "above",
-      "sector": "Technology"
-    },
-    {
-      "ticker": "CL",
-      "price": 99.66,
-      "wma200": 82.87,
-      "dist_pct": 20.27,
-      "weeks": 1040,
-      "status": "above",
-      "sector": "Consumer Staples"
-    },
-    {
       "ticker": "AXP",
-      "price": 312.39,
-      "wma200": 258.21,
-      "dist_pct": 20.98,
+      "price": 316.4,
+      "wma200": 258.23,
+      "dist_pct": 22.53,
       "weeks": 1040,
       "status": "above",
       "sector": "Financials"
     },
     {
+      "ticker": "WM",
+      "price": 246.49,
+      "wma200": 200.01,
+      "dist_pct": 23.24,
+      "weeks": 1040,
+      "status": "above",
+      "sector": "Industrials"
+    },
+    {
       "ticker": "LIN",
-      "price": 524.61,
-      "wma200": 431.83,
-      "dist_pct": 21.49,
+      "price": 532.61,
+      "wma200": 431.87,
+      "dist_pct": 23.33,
       "weeks": 1040,
       "status": "above",
       "sector": "Materials"
     },
     {
-      "ticker": "SO",
-      "price": 95.0,
-      "wma200": 78.01,
-      "dist_pct": 21.78,
+      "ticker": "TJX",
+      "price": 143.77,
+      "wma200": 116.13,
+      "dist_pct": 23.8,
       "weeks": 1040,
       "status": "above",
-      "sector": "Utilities"
+      "sector": "Consumer Discretionary"
     },
     {
-      "ticker": "WM",
-      "price": 247.29,
-      "wma200": 200.02,
-      "dist_pct": 23.63,
+      "ticker": "VRTX",
+      "price": 534.57,
+      "wma200": 430.44,
+      "dist_pct": 24.19,
       "weeks": 1040,
       "status": "above",
-      "sector": "Industrials"
-    },
-    {
-      "ticker": "CAT",
-      "price": 543.69,
-      "wma200": 438.19,
-      "dist_pct": 24.08,
-      "weeks": 1040,
-      "status": "above",
-      "sector": "Industrials"
+      "sector": "Health Care"
     },
     {
       "ticker": "DIS",
-      "price": 125.6,
-      "wma200": 100.53,
-      "dist_pct": 24.93,
-      "weeks": 1040,
-      "status": "above",
-      "sector": "Communication Services"
-    },
-    {
-      "ticker": "HOOD",
-      "price": 65.78,
-      "wma200": 52.6,
-      "dist_pct": 25.07,
-      "weeks": 279,
-      "status": "above",
-      "sector": "Financials"
-    },
-    {
-      "ticker": "TJX",
-      "price": 146.09,
-      "wma200": 116.15,
-      "dist_pct": 25.78,
-      "weeks": 1040,
-      "status": "above",
-      "sector": "Consumer Discretionary"
-    },
-    {
-      "ticker": "LMT",
-      "price": 599.24,
-      "wma200": 474.07,
-      "dist_pct": 26.4,
-      "weeks": 1040,
-      "status": "above",
-      "sector": "Industrials"
-    },
-    {
-      "ticker": "AMZN",
-      "price": 244.43,
-      "wma200": 192.87,
-      "dist_pct": 26.74,
-      "weeks": 1040,
-      "status": "above",
-      "sector": "Consumer Discretionary"
-    },
-    {
-      "ticker": "WFC",
-      "price": 80.94,
-      "wma200": 63.68,
-      "dist_pct": 27.11,
-      "weeks": 1040,
-      "status": "above",
-      "sector": "Financials"
-    },
-    {
-      "ticker": "TSLA",
-      "price": 380.14,
-      "wma200": 298.98,
-      "dist_pct": 27.15,
-      "weeks": 857,
-      "status": "above",
-      "sector": "Consumer Discretionary"
-    },
-    {
-      "ticker": "DUK",
-      "price": 131.9,
-      "wma200": 103.42,
-      "dist_pct": 27.54,
-      "weeks": 1040,
-      "status": "above",
-      "sector": "Utilities"
-    },
-    {
-      "ticker": "VZ",
-      "price": 47.28,
-      "wma200": 36.98,
-      "dist_pct": 27.85,
+      "price": 127.24,
+      "wma200": 100.54,
+      "dist_pct": 26.55,
       "weeks": 1040,
       "status": "above",
       "sector": "Communication Services"
     },
     {
       "ticker": "TMO",
-      "price": 685.52,
-      "wma200": 536.04,
-      "dist_pct": 27.89,
+      "price": 683.04,
+      "wma200": 536.03,
+      "dist_pct": 27.43,
       "weeks": 1040,
       "status": "above",
       "sector": "Health Care"
     },
     {
-      "ticker": "INTC",
-      "price": 54.47,
-      "wma200": 42.48,
-      "dist_pct": 28.23,
+      "ticker": "DUK",
+      "price": 131.91,
+      "wma200": 103.42,
+      "dist_pct": 27.55,
       "weeks": 1040,
       "status": "above",
-      "sector": "Technology"
+      "sector": "Utilities"
     },
     {
-      "ticker": "VAC",
-      "price": 106.73,
-      "wma200": 82.95,
-      "dist_pct": 28.67,
-      "weeks": 786,
+      "ticker": "LMT",
+      "price": 605.88,
+      "wma200": 474.11,
+      "dist_pct": 27.79,
+      "weeks": 1040,
       "status": "above",
-      "sector": "Consumer Discretionary"
+      "sector": "Industrials"
     },
     {
-      "ticker": "BLK",
-      "price": 1141.86,
-      "wma200": 886.35,
-      "dist_pct": 28.83,
+      "ticker": "CAT",
+      "price": 561.74,
+      "wma200": 438.28,
+      "dist_pct": 28.17,
+      "weeks": 1040,
+      "status": "above",
+      "sector": "Industrials"
+    },
+    {
+      "ticker": "VZ",
+      "price": 47.54,
+      "wma200": 36.98,
+      "dist_pct": 28.55,
+      "weeks": 1040,
+      "status": "above",
+      "sector": "Communication Services"
+    },
+    {
+      "ticker": "HOOD",
+      "price": 67.92,
+      "wma200": 52.61,
+      "dist_pct": 29.11,
+      "weeks": 279,
+      "status": "above",
+      "sector": "Financials"
+    },
+    {
+      "ticker": "WFC",
+      "price": 82.28,
+      "wma200": 63.68,
+      "dist_pct": 29.2,
       "weeks": 1040,
       "status": "above",
       "sector": "Financials"
     },
     {
       "ticker": "UNP",
-      "price": 298.38,
+      "price": 297.89,
       "wma200": 228.78,
-      "dist_pct": 30.42,
+      "dist_pct": 30.21,
       "weeks": 1040,
       "status": "above",
       "sector": "Industrials"
     },
     {
+      "ticker": "VAC",
+      "price": 108.71,
+      "wma200": 82.96,
+      "dist_pct": 31.04,
+      "weeks": 786,
+      "status": "above",
+      "sector": "Consumer Discretionary"
+    },
+    {
+      "ticker": "BRK-B",
+      "price": 580.79,
+      "wma200": 441.29,
+      "dist_pct": 31.61,
+      "weeks": 1040,
+      "status": "above",
+      "sector": "Financials"
+    },
+    {
+      "ticker": "BLK",
+      "price": 1166.96,
+      "wma200": 886.48,
+      "dist_pct": 31.64,
+      "weeks": 1040,
+      "status": "above",
+      "sector": "Financials"
+    },
+    {
+      "ticker": "AMZN",
+      "price": 254.12,
+      "wma200": 192.91,
+      "dist_pct": 31.73,
+      "weeks": 1040,
+      "status": "above",
+      "sector": "Consumer Discretionary"
+    },
+    {
       "ticker": "COP",
-      "price": 135.02,
-      "wma200": 103.11,
-      "dist_pct": 30.95,
+      "price": 136.8,
+      "wma200": 103.12,
+      "dist_pct": 32.67,
       "weeks": 1040,
       "status": "above",
       "sector": "Energy"
     },
     {
-      "ticker": "VRTX",
-      "price": 564.12,
-      "wma200": 430.59,
-      "dist_pct": 31.01,
-      "weeks": 1040,
+      "ticker": "TSLA",
+      "price": 400.0,
+      "wma200": 299.08,
+      "dist_pct": 33.74,
+      "weeks": 857,
       "status": "above",
-      "sector": "Health Care"
-    },
-    {
-      "ticker": "BRK-B",
-      "price": 579.32,
-      "wma200": 441.28,
-      "dist_pct": 31.28,
-      "weeks": 1040,
-      "status": "above",
-      "sector": "Financials"
+      "sector": "Consumer Discretionary"
     },
     {
       "ticker": "GOOGL",
-      "price": 273.1,
-      "wma200": 205.46,
-      "dist_pct": 32.92,
+      "price": 274.96,
+      "wma200": 205.47,
+      "dist_pct": 33.82,
       "weeks": 1040,
       "status": "above",
       "sector": "Communication Services"
     },
     {
-      "ticker": "MS",
-      "price": 167.55,
-      "wma200": 124.64,
-      "dist_pct": 34.42,
-      "weeks": 1040,
-      "status": "above",
-      "sector": "Financials"
-    },
-    {
-      "ticker": "AMAT",
-      "price": 311.18,
-      "wma200": 231.45,
-      "dist_pct": 34.45,
+      "ticker": "INTC",
+      "price": 57.4,
+      "wma200": 42.49,
+      "dist_pct": 35.08,
       "weeks": 1040,
       "status": "above",
       "sector": "Technology"
     },
     {
       "ticker": "MRK",
-      "price": 140.29,
-      "wma200": 104.27,
-      "dist_pct": 34.54,
+      "price": 141.32,
+      "wma200": 104.28,
+      "dist_pct": 35.52,
       "weeks": 1040,
       "status": "above",
       "sector": "Health Care"
     },
     {
       "ticker": "MA",
-      "price": 659.97,
-      "wma200": 487.17,
-      "dist_pct": 35.47,
+      "price": 666.96,
+      "wma200": 487.21,
+      "dist_pct": 36.89,
+      "weeks": 1040,
+      "status": "above",
+      "sector": "Financials"
+    },
+    {
+      "ticker": "MS",
+      "price": 170.88,
+      "wma200": 124.66,
+      "dist_pct": 37.08,
       "weeks": 1040,
       "status": "above",
       "sector": "Financials"
     },
     {
       "ticker": "GS",
-      "price": 801.03,
-      "wma200": 590.21,
-      "dist_pct": 35.72,
+      "price": 812.87,
+      "wma200": 590.27,
+      "dist_pct": 37.71,
       "weeks": 1040,
       "status": "above",
       "sector": "Financials"
     },
     {
       "ticker": "COST",
-      "price": 1086.81,
-      "wma200": 794.62,
-      "dist_pct": 36.77,
+      "price": 1097.81,
+      "wma200": 794.67,
+      "dist_pct": 38.15,
       "weeks": 1040,
       "status": "above",
       "sector": "Consumer Staples"
     },
     {
+      "ticker": "AMAT",
+      "price": 322.04,
+      "wma200": 231.51,
+      "dist_pct": 39.11,
+      "weeks": 1040,
+      "status": "above",
+      "sector": "Technology"
+    },
+    {
+      "ticker": "XOM",
+      "price": 160.18,
+      "wma200": 114.62,
+      "dist_pct": 39.75,
+      "weeks": 1040,
+      "status": "above",
+      "sector": "Energy"
+    },
+    {
       "ticker": "JPM",
-      "price": 316.74,
-      "wma200": 230.94,
-      "dist_pct": 37.16,
+      "price": 322.96,
+      "wma200": 230.97,
+      "dist_pct": 39.83,
       "weeks": 1040,
       "status": "above",
       "sector": "Financials"
     },
     {
-      "ticker": "XOM",
-      "price": 158.08,
-      "wma200": 114.61,
-      "dist_pct": 37.93,
+      "ticker": "CVX",
+      "price": 212.45,
+      "wma200": 151.73,
+      "dist_pct": 40.02,
       "weeks": 1040,
       "status": "above",
       "sector": "Energy"
     },
     {
       "ticker": "VRT",
-      "price": 173.37,
-      "wma200": 124.81,
-      "dist_pct": 38.9,
+      "price": 178.71,
+      "wma200": 124.84,
+      "dist_pct": 43.15,
       "weeks": 435,
       "status": "above",
       "sector": "Industrials"
     },
     {
-      "ticker": "CVX",
-      "price": 210.95,
-      "wma200": 151.72,
-      "dist_pct": 39.04,
-      "weeks": 1040,
-      "status": "above",
-      "sector": "Energy"
-    },
-    {
       "ticker": "DE",
-      "price": 641.02,
-      "wma200": 456.38,
-      "dist_pct": 40.46,
+      "price": 654.24,
+      "wma200": 456.44,
+      "dist_pct": 43.33,
       "weeks": 1040,
       "status": "above",
       "sector": "Industrials"
     },
     {
-      "ticker": "AVGO",
-      "price": 300.86,
-      "wma200": 214.16,
-      "dist_pct": 40.49,
-      "weeks": 904,
-      "status": "above",
-      "sector": "Technology"
-    },
-    {
       "ticker": "V",
-      "price": 424.39,
-      "wma200": 298.37,
-      "dist_pct": 42.24,
+      "price": 429.56,
+      "wma200": 298.39,
+      "dist_pct": 43.96,
       "weeks": 976,
       "status": "above",
       "sector": "Financials"
     },
     {
-      "ticker": "TXN",
-      "price": 270.19,
-      "wma200": 189.53,
-      "dist_pct": 42.56,
-      "weeks": 1040,
+      "ticker": "AVGO",
+      "price": 312.34,
+      "wma200": 214.21,
+      "dist_pct": 45.81,
+      "weeks": 904,
       "status": "above",
       "sector": "Technology"
     },
     {
       "ticker": "PM",
-      "price": 184.32,
-      "wma200": 128.32,
-      "dist_pct": 43.64,
+      "price": 187.8,
+      "wma200": 128.34,
+      "dist_pct": 46.33,
       "weeks": 976,
       "status": "above",
       "sector": "Consumer Staples"
     },
     {
-      "ticker": "LRCX",
-      "price": 185.01,
-      "wma200": 128.54,
-      "dist_pct": 43.93,
+      "ticker": "KO",
+      "price": 97.4,
+      "wma200": 65.73,
+      "dist_pct": 48.19,
+      "weeks": 1040,
+      "status": "above",
+      "sector": "Consumer Staples"
+    },
+    {
+      "ticker": "TXN",
+      "price": 281.85,
+      "wma200": 189.59,
+      "dist_pct": 48.66,
       "weeks": 1040,
       "status": "above",
       "sector": "Technology"
     },
     {
-      "ticker": "CSCO",
-      "price": 94.2,
-      "wma200": 64.21,
-      "dist_pct": 46.71,
+      "ticker": "LRCX",
+      "price": 192.69,
+      "wma200": 128.58,
+      "dist_pct": 49.86,
       "weeks": 1040,
       "status": "above",
       "sector": "Technology"
     },
     {
       "ticker": "C",
-      "price": 113.33,
-      "wma200": 76.55,
-      "dist_pct": 48.05,
+      "price": 115.59,
+      "wma200": 76.56,
+      "dist_pct": 50.98,
       "weeks": 1040,
       "status": "above",
       "sector": "Financials"
     },
     {
-      "ticker": "KO",
-      "price": 97.59,
-      "wma200": 65.73,
-      "dist_pct": 48.47,
+      "ticker": "CSCO",
+      "price": 97.04,
+      "wma200": 64.22,
+      "dist_pct": 51.1,
       "weeks": 1040,
       "status": "above",
-      "sector": "Consumer Staples"
+      "sector": "Technology"
     },
     {
       "ticker": "RTX",
-      "price": 196.19,
-      "wma200": 130.59,
-      "dist_pct": 50.23,
+      "price": 198.48,
+      "wma200": 130.6,
+      "dist_pct": 51.97,
       "weeks": 1040,
       "status": "above",
       "sector": "Industrials"
     },
     {
       "ticker": "SPG",
-      "price": 233.98,
-      "wma200": 151.35,
-      "dist_pct": 54.59,
+      "price": 235.27,
+      "wma200": 151.36,
+      "dist_pct": 55.44,
       "weeks": 1040,
       "status": "above",
       "sector": "Real Estate"
     },
     {
       "ticker": "HLT",
-      "price": 366.2,
-      "wma200": 236.31,
-      "dist_pct": 54.96,
+      "price": 369.94,
+      "wma200": 236.33,
+      "dist_pct": 56.53,
       "weeks": 677,
       "status": "above",
       "sector": "Consumer Discretionary"
     },
     {
       "ticker": "AAPL",
-      "price": 355.58,
-      "wma200": 226.71,
-      "dist_pct": 56.84,
+      "price": 358.54,
+      "wma200": 226.73,
+      "dist_pct": 58.14,
       "weeks": 1040,
       "status": "above",
       "sector": "Technology"
     },
     {
       "ticker": "JNJ",
-      "price": 273.94,
-      "wma200": 174.01,
-      "dist_pct": 57.42,
+      "price": 275.51,
+      "wma200": 174.02,
+      "dist_pct": 58.32,
       "weeks": 1040,
       "status": "above",
       "sector": "Health Care"
     },
     {
       "ticker": "WMT",
-      "price": 131.94,
-      "wma200": 83.74,
-      "dist_pct": 57.55,
+      "price": 133.13,
+      "wma200": 83.75,
+      "dist_pct": 58.96,
       "weeks": 1040,
       "status": "above",
       "sector": "Consumer Staples"
     },
     {
+      "ticker": "ABBV",
+      "price": 291.88,
+      "wma200": 182.11,
+      "dist_pct": 60.28,
+      "weeks": 726,
+      "status": "above",
+      "sector": "Health Care"
+    },
+    {
       "ticker": "GE",
-      "price": 316.98,
-      "wma200": 201.15,
-      "dist_pct": 57.59,
+      "price": 323.94,
+      "wma200": 201.18,
+      "dist_pct": 61.02,
+      "weeks": 1040,
+      "status": "above",
+      "sector": "Industrials"
+    },
+    {
+      "ticker": "PWR",
+      "price": 580.6,
+      "wma200": 353.67,
+      "dist_pct": 64.17,
       "weeks": 1040,
       "status": "above",
       "sector": "Industrials"
     },
     {
       "ticker": "TSM",
-      "price": 342.34,
-      "wma200": 214.57,
-      "dist_pct": 59.55,
+      "price": 353.34,
+      "wma200": 214.63,
+      "dist_pct": 64.63,
       "weeks": 1040,
       "status": "above",
       "sector": "Technology"
     },
     {
-      "ticker": "PWR",
-      "price": 565.47,
-      "wma200": 353.59,
-      "dist_pct": 59.92,
-      "weeks": 1040,
-      "status": "above",
-      "sector": "Industrials"
-    },
-    {
       "ticker": "NEM",
-      "price": 101.44,
-      "wma200": 63.31,
-      "dist_pct": 60.24,
+      "price": 106.87,
+      "wma200": 63.33,
+      "dist_pct": 68.74,
       "weeks": 1040,
       "status": "above",
       "sector": "Materials"
     },
     {
-      "ticker": "ABBV",
-      "price": 294.48,
-      "wma200": 182.12,
-      "dist_pct": 61.69,
-      "weeks": 726,
-      "status": "above",
-      "sector": "Health Care"
-    },
-    {
       "ticker": "ANET",
-      "price": 163.99,
-      "wma200": 100.95,
-      "dist_pct": 62.45,
+      "price": 174.73,
+      "wma200": 101.0,
+      "dist_pct": 72.99,
       "weeks": 652,
       "status": "above",
       "sector": "Technology"
     },
     {
       "ticker": "LLY",
-      "price": 1392.22,
+      "price": 1392.38,
       "wma200": 799.0,
-      "dist_pct": 74.25,
+      "dist_pct": 74.27,
       "weeks": 1040,
       "status": "above",
       "sector": "Health Care"
     },
     {
       "ticker": "PSX",
-      "price": 236.08,
-      "wma200": 135.01,
-      "dist_pct": 74.86,
+      "price": 242.12,
+      "wma200": 135.04,
+      "dist_pct": 79.29,
       "weeks": 764,
       "status": "above",
       "sector": "Energy"
     },
     {
       "ticker": "PANW",
-      "price": 356.14,
-      "wma200": 185.01,
-      "dist_pct": 92.49,
+      "price": 366.76,
+      "wma200": 185.07,
+      "dist_pct": 98.18,
       "weeks": 750,
       "status": "above",
       "sector": "Technology"
     },
     {
       "ticker": "PLTR",
-      "price": 163.59,
-      "wma200": 84.69,
-      "dist_pct": 93.16,
+      "price": 172.17,
+      "wma200": 84.73,
+      "dist_pct": 103.19,
       "weeks": 322,
       "status": "above",
       "sector": "Technology"
     },
     {
-      "ticker": "DELL",
-      "price": 297.06,
-      "wma200": 149.62,
-      "dist_pct": 98.55,
-      "weeks": 537,
-      "status": "above",
-      "sector": "Technology"
-    },
-    {
       "ticker": "AMD",
-      "price": 406.03,
-      "wma200": 202.77,
-      "dist_pct": 100.24,
+      "price": 424.54,
+      "wma200": 202.86,
+      "dist_pct": 109.28,
       "weeks": 1040,
       "status": "above",
       "sector": "Technology"
     },
     {
-      "ticker": "OKTA",
-      "price": 201.77,
-      "wma200": 96.82,
-      "dist_pct": 108.4,
-      "weeks": 504,
+      "ticker": "DELL",
+      "price": 316.96,
+      "wma200": 149.72,
+      "dist_pct": 111.71,
+      "weeks": 537,
       "status": "above",
       "sector": "Technology"
     },
     {
       "ticker": "SPHR",
-      "price": 130.19,
-      "wma200": 61.88,
-      "dist_pct": 110.4,
+      "price": 132.28,
+      "wma200": 61.89,
+      "dist_pct": 113.74,
       "weeks": 347,
       "status": "above",
       "sector": "Communication Services"
     },
     {
+      "ticker": "OKTA",
+      "price": 207.46,
+      "wma200": 96.85,
+      "dist_pct": 114.22,
+      "weeks": 504,
+      "status": "above",
+      "sector": "Technology"
+    },
+    {
       "ticker": "CRWD",
-      "price": 209.3,
-      "wma200": 99.39,
-      "dist_pct": 110.59,
+      "price": 217.2,
+      "wma200": 99.43,
+      "dist_pct": 118.45,
       "weeks": 390,
       "status": "above",
       "sector": "Technology"
     },
     {
       "ticker": "CAKE",
-      "price": 109.66,
-      "wma200": 50.12,
-      "dist_pct": 118.78,
+      "price": 111.2,
+      "wma200": 50.13,
+      "dist_pct": 121.82,
       "weeks": 1040,
       "status": "above",
       "sector": "Consumer Discretionary"
     },
     {
       "ticker": "MU",
-      "price": 601.25,
-      "wma200": 250.77,
-      "dist_pct": 139.76,
+      "price": 646.95,
+      "wma200": 251.0,
+      "dist_pct": 157.75,
       "weeks": 1040,
       "status": "above",
       "sector": "Technology"
     },
     {
       "ticker": "MRNA",
-      "price": 220.84,
-      "wma200": 82.5,
-      "dist_pct": 167.68,
+      "price": 228.64,
+      "wma200": 82.54,
+      "dist_pct": 177.01,
       "weeks": 417,
       "status": "above",
       "sector": "Health Care"
     },
     {
       "ticker": "RDDT",
-      "price": 91.51,
+      "price": 93.83,
       "wma200": null,
       "dist_pct": null,
       "weeks": 141,
@@ -1106,7 +1106,7 @@
     },
     {
       "ticker": "GEV",
-      "price": 715.0,
+      "price": 735.31,
       "wma200": null,
       "dist_pct": null,
       "weeks": 140,
@@ -1115,7 +1115,7 @@
     },
     {
       "ticker": "CRCL",
-      "price": 48.27,
+      "price": 49.29,
       "wma200": null,
       "dist_pct": null,
       "weeks": 78,
@@ -1124,7 +1124,7 @@
     },
     {
       "ticker": "NBIS",
-      "price": 84.99,
+      "price": 89.46,
       "wma200": null,
       "dist_pct": null,
       "weeks": 110,
@@ -1133,7 +1133,7 @@
     },
     {
       "ticker": "CRWV",
-      "price": 42.57,
+      "price": 44.15,
       "wma200": null,
       "dist_pct": null,
       "weeks": 88,
@@ -1142,7 +1142,7 @@
     },
     {
       "ticker": "ARM",
-      "price": 161.51,
+      "price": 171.55,
       "wma200": null,
       "dist_pct": null,
       "weeks": 168,
@@ -1151,7 +1151,7 @@
     },
     {
       "ticker": "SNDK",
-      "price": 73.61,
+      "price": 85.36,
       "wma200": null,
       "dist_pct": null,
       "weeks": 94,
@@ -5162,7 +5162,8 @@
       "2026-11-23",
       "2026-11-24",
       "2026-11-25",
-      "2026-11-26"
+      "2026-11-26",
+      "2026-11-27"
     ],
     "score": [
       1.0,
@@ -9166,7 +9167,8 @@
       6.0,
       6.0,
       6.0,
-      6.0
+      6.0,
+      3.0
     ],
     "vix": [
       17.61,
@@ -13170,7 +13172,8 @@
       26.62,
       26.36,
       28.29,
-      26.8
+      26.8,
+      23.81
     ],
     "fng": [
       68.0,
@@ -17173,8 +17176,9 @@
       18.59,
       14.88,
       10.96,
-      15.6,
-      15.0
+      20.91,
+      21.34,
+      24.86
     ],
     "breadth": [
       91.9,
@@ -21178,7 +21182,8 @@
       55.71,
       55.71,
       58.52,
-      58.52
+      58.52,
+      62.32
     ],
     "wma": [
       19.51,
@@ -25179,10 +25184,11 @@
       21.7,
       21.7,
       21.7,
-      16.98,
-      16.98,
-      16.98,
-      16.98
+      15.09,
+      15.09,
+      15.09,
+      15.09,
+      15.09
     ],
     "spx": [
       1271.87,
@@ -29186,7 +29192,8 @@
       7237.17,
       7201.09,
       7182.78,
-      7182.78
+      7182.78,
+      7297.49
     ],
     "pts_vix": [
       0,
@@ -33190,7 +33197,8 @@
       3,
       3,
       3,
-      3
+      3,
+      0
     ],
     "pts_fear_greed": [
       0,
@@ -37189,6 +37197,7 @@
       1,
       1,
       1,
+      2,
       2,
       2,
       2,
@@ -41198,6 +41207,7 @@
       0,
       0,
       0,
+      0,
       0
     ],
     "pts_wma200": [
@@ -44811,6 +44821,7 @@
       2,
       2,
       2,
+      1,
       1,
       1,
       1,
