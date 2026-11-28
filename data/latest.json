@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T19:35+00:00",
+  "generated_at": "2026-11-28T03:28+00:00",
   "total": 3,
   "max_total": 12,
   "tier": {
@@ -65,7 +65,7 @@
       }
     },
     "fear_greed": {
-      "value": 24.8,
+      "value": 24.8857142857143,
       "points": 2,
       "rating": "extreme fear",
       "stale": false,
@@ -448,15 +448,6 @@
       "sector": "Consumer Staples"
     },
     {
-      "ticker": "NEE",
-      "price": 84.95,
-      "wma200": 71.65,
-      "dist_pct": 18.56,
-      "weeks": 1040,
-      "status": "above",
-      "sector": "Utilities"
-    },
-    {
       "ticker": "APD",
       "price": 319.09,
       "wma200": 268.83,
@@ -473,6 +464,15 @@
       "weeks": 1040,
       "status": "above",
       "sector": "Financials"
+    },
+    {
+      "ticker": "NEE",
+      "price": 84.95,
+      "wma200": 71.13,
+      "dist_pct": 19.43,
+      "weeks": 1040,
+      "status": "above",
+      "sector": "Utilities"
     },
     {
       "ticker": "EQIX",
@@ -17241,7 +17241,7 @@
       10.96,
       20.91,
       21.34,
-      24.8
+      24.89
     ],
     "breadth": [
       91.9,
